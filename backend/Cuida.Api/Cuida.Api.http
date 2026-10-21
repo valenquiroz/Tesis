@@ -1,0 +1,26 @@
+# Pruebas rápidas de la API desde Visual Studio.
+# 1) Ejecutá "login" y copiá el token de la respuesta en @token.
+
+@host = http://localhost:5282/api
+@token = PEGAR_TOKEN_AQUI
+
+### Login
+POST {{host}}/Auth/login
+Content-Type: application/json
+
+{
+  "email": "correo@ejemplo.com",
+  "password": "TuContraseña1!"
+}
+
+### Personas asistidas
+GET {{host}}/PersonasAsistidas
+Authorization: Bearer {{token}}
+
+### Recomendaciones para una persona
+GET {{host}}/Recomendaciones/1
+Authorization: Bearer {{token}}
+
+### Turnos
+GET {{host}}/Turnos
+Authorization: Bearer {{token}}

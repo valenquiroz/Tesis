@@ -1,0 +1,35 @@
+# ---------- Backend (.NET) ----------
+bin/
+obj/
+*.user
+.vs/
+# Archivos que suben los usuarios: datos personales, nunca al repositorio
+backend/Cuida.Api/Archivos/
+# Configuración local con secretos (clave JWT, admin)
+appsettings.Local.json
+
+# ---------- Frontend (Node / Vite) ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+!.env.example
+
+# ---------- Varios ----------
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# lista de cuentas de demo con su contraseña
+docs/cuentas-demo.md
+
+# lista de cuentas con contraseña que armó Val
+USUARIOS.txt
+
+# configuración local de Claude Code
+.claude/

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Cuida.Api/Cuida.Api.csproj" />
+  <Project Path="Cuida.Tests/Cuida.Tests.csproj" />
+</Solution>
