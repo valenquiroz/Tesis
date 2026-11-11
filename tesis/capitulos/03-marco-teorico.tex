@@ -1,0 +1,161 @@
+%!TEX root = ../main.tex
+
+\chapter{Síntesis de la literatura consultada}\label{cap:marco-teorico}
+
+En las últimas décadas, el cuidado de personas con discapacidad se volvió un tema cada vez más central. Esto tiene mucho que ver con el envejecimiento de la población, el aumento de las enfermedades crónicas y el hecho de que hoy las personas con condiciones complejas viven más tiempo y necesitan un acompañamiento continuo. La gran mayoría de este trabajo lo terminan asumiendo familiares o personas cercanas que no tienen una formación previa en salud, lo que genera un desgaste físico, emocional y organizativo enorme en su día a día.
+
+Por el lado de la tecnología, hay un interés creciente en desarrollar herramientas digitales para darles una mano a los cuidadores. Sin embargo, casi todas las soluciones que existen hoy se quedan cortas, ya que ofrecen funciones aisladas, como recordatorios para tomar los remedios, agendas de turnos o información de salud, pero ninguna logra reunir en una sola plataforma todas las necesidades integrales que tiene una persona que cuida a otra.
+
+\section{Estado del Arte}
+
+\subsection{Investigaciones nacionales}
+
+En Argentina, la investigación sobre discapacidad y cuidado informal viene desarrollándose sobre todo desde el lado de las ciencias sociales, la salud pública y la rehabilitación. En estos últimos años, además, se sumaron datos estadísticos oficiales que ayudan a dimensionar mucho mejor la verdadera magnitud de este tema.
+
+La Encuesta sobre Trabajo No Remunerado y Uso del Tiempo del INDEC, sistematizada por la Dirección Nacional de Economía, Igualdad y Género \citep{dneyg2020}, es una de las fuentes clave para entender cómo funciona el trabajo de cuidado no remunerado en el país. Sus números muestran que la inmensa mayoría de los argentinos realiza tareas domésticas y de cuidado sin cobrar un sueldo, dedicándole en promedio más de cinco horas al día a este tipo de actividades \citep{dneyg2020}. Por su parte, la Dirección Nacional de Economía, Igualdad y Género (del Ministerio de Economía) aporta otro dato fundamental. El valor económico del trabajo doméstico y de cuidado no remunerado representa una parte del Producto Bruto Interno más grande que la de sectores clave como la industria o el comercio \citep{dneyg2020}. Esto deja clarísimo el peso enorme que tiene a nivel económico y social, a pesar de que suele quedar invisible en las estadísticas tradicionales.
+
+Por supuesto, esta carga no se distribuye de manera pareja, sino que recae de forma totalmente desproporcionada sobre las mujeres. Y la situación se vuelve todavía más exigente cuando la persona a la que se cuida es un niño, niña o joven con discapacidad, porque a la rutina doméstica habitual hay que sumarles los traslados a terapias, los trámites con las obras sociales o prepagas y el resolver a cada rato los cortes o interrupciones en los apoyos que reciben. La Agencia Nacional de Discapacidad (ANDIS), desde su Mesa Interministerial de Políticas de Cuidado, dejó documentada esta sobrecarga \citep{mesacuidados2020} y cómo impacta de lleno en la vida de quienes cuidan, recortándoles drásticamente el tiempo disponible para su propio desarrollo personal, profesional y económico.
+
+Si miramos la cantidad de gente involucrada, los informes de ANDIS registran 1.680.723 personas con Certificado Único de Discapacidad (CUD) vigente en todo el país, a noviembre de 2023 \citep{andis2023}. Esta cifra es solo un piso, ya que no contempla a quienes no tienen el certificado, por lo que el universo real de personas con discapacidad y, por ende, de sus cuidadores, es muchísimo más grande. A esto se le suman estimaciones de organizaciones de la sociedad civil, como La Usina Asociación Civil, que señalan que en cerca de uno de cada cinco hogares del país vive al menos una persona con discapacidad \citep{usina}, lo que multiplica el número de personas impactadas de forma indirecta por esta realidad.
+
+Diversas investigaciones de universidades nacionales y organismos públicos coinciden en señalar los mismos problemas de siempre, complicaciones para coordinar turnos médicos, trabas con los trámites y la documentación, dificultades para acceder a prestaciones y la odisea de encontrar información confiable. Todos estos estudios remarcan que la información y los recursos están súper fragmentados, lo que obliga a los cuidadores a perder muchísimo tiempo y energía en gestiones administrativas en lugar de dedicarlo al cuidado directo. De hecho, basta con mirar la propia web oficial de trámites del Estado para personas con discapacidad, junta más de diez gestiones distintas (desde el CUD y pensiones no contributivas hasta subsidios, el símbolo de estacionamiento o el registro de prestadores) \citep{senadis}. Si bien demuestra cierta intención de centralizar, también refleja lo disperso y complejo que resulta el sistema para cualquier familia que tiene que llevarlo adelante.
+
+En el terreno tecnológico, los desarrollos que existen hoy se enfocan más en la gestión de datos clínicos o administrativos para instituciones de salud que en las familias. Es verdad que hay algunas aplicaciones móviles locales que ayudan con recordatorios de medicamentos o seguimiento de tratamientos, pero suelen ser muy básicas, acotadas y con muy pocas opciones de personalización.
+
+En resumen, lo que muestra la investigación a nivel nacional es que estamos ante una problemática real, profunda y muy bien respaldada por los datos, donde todavía faltan soluciones tecnológicas integrales que piensen verdaderamente en las necesidades del cuidador informal.
+
+\subsection{Brechas identificadas en la investigación nacional}
+
+Al analizar todo este panorama y los antecedentes en Argentina, quedan al descubierto varias carencias y vacíos claros.
+
+\begin{itemize}
+    \item Falta de soluciones integrales: No existen plataformas completas pensadas específicamente para la realidad de los cuidadores no profesionales.
+    \item Información rígida: Prácticamente no se aprovechan mecanismos para personalizar los contenidos según las necesidades de cada persona.
+    \item Herramientas desconectadas: Hay una desconexión total entre los recursos de información, las herramientas para organizarse el día a día y los espacios de acompañamiento.
+    \item Cuidado sin coordinación: Cuando cuidan varias personas, como familiares, cuidadores contratados o empleados de una institución, no hay un registro común que muestre qué se hizo y quién lo hizo.
+    \item Escaso uso de inteligencia artificial: Todavía es muy baja la presencia de técnicas de inteligencia artificial aplicadas a facilitar y aliviar las tareas diarias del cuidado.
+    \item Descuido de la usabilidad y accesibilidad: No se suele prestar suficiente atención a que las interfaces sean fáciles de usar para personas con distintos niveles de manejo tecnológico o alfabetización digital.
+    \item Trámites y burocracia dispersa: Persiste una fragmentación enorme de los trámites y prestaciones del Estado entre múltiples organismos, sin que exista un canal único que guíe paso a paso al cuidador de acuerdo con su situación particular.
+\end{itemize}
+
+Todas estas carencias son las que justifican la relevancia de este proyecto y sirven como guía para tomar las decisiones de diseño de la solución tecnológica.
+
+\subsection{Investigaciones internacionales}
+
+Cuando se mira la investigación a nivel internacional, el desarrollo de tecnologías de apoyo al cuidado informal tiene un recorrido más amplio y consolidado. Instituciones como la Organización Mundial de la Salud (OMS) reconocen abiertamente que las herramientas digitales son clave para mejorar el acceso a la información, optimizar la coordinación del cuidado y garantizar que la atención no se interrumpa \citep{who2022}.
+
+Diversos estudios realizados en Europa y Norteamérica han evaluado el impacto de plataformas de e-health y aplicaciones móviles dirigidas a cuidadores de personas con discapacidad, demencia o enfermedades crónicas. Las conclusiones muestran mejoras concretas en la percepción de apoyo, la organización de tareas y la posibilidad de acceder a recursos, sobre todo cuando las aplicaciones son sencillas de usar y están bien adaptadas a la realidad cotidiana del usuario \citep{schwedler2025}.
+
+En la literatura internacional más reciente resalta con mucha fuerza el crecimiento de los sistemas conversacionales basados en inteligencia artificial, capaces de responder dudas frecuentes a través de lenguaje natural. Por ejemplo, una revisión exploratoria publicada en 2026 en The Gerontologist, que analizó treinta investigaciones sobre chatbots de IA para cuidadores familiares, concluyó que estas herramientas brindan información bastante precisa y accesible sobre el cuidado \citep{gallagher2026}. No obstante, el estudio señala que la evidencia sobre su capacidad para dar contención emocional y garantizar la seguridad absoluta de las respuestas es todavía limitada y mixta. En esta misma línea, estudios de caso llevados a cabo en Hong Kong y Japón sobre chatbots de orientación para cuidadores de personas con demencia registraron una valoración muy positiva por parte de los usuarios, quienes destacaron la facilidad de uso y la utilidad de las respuestas \citep{cheng2024}. De manera complementaria, investigaciones sobre asistentes conversacionales basados en modelos de lenguaje de gran escala (LLMs) combinados con técnicas de generación aumentada por recuperación (RAG) demostraron que, al nutrirse con conocimiento especializado sobre una condición de salud específica, entregan respuestas mucho más contextualizadas que los asistentes genéricos \citep{hasan2024}.
+
+Revisiones sistemáticas más amplias sobre agentes conversacionales en el campo de la salud señalan que sus usos más comunes son el seguimiento y apoyo al tratamiento, el soporte a los servicios sanitarios y la educación del paciente. Coinciden, además, en que hace falta realizar evaluaciones más rigurosas sobre su grado de aceptación, seguridad y efectividad real, y en que no deben reemplazar la consulta con profesionales de la salud \citep{milneives2020,binsawad2022}.
+
+Otro aspecto que resalta la literatura internacional es la inclusión de comunidades virtuales y espacios de intercambio entre cuidadores, que potencian el apoyo social y facilitan la circulación de experiencias prácticas. Sin embargo, cuando el intercambio es abierto, nada impide que circulen consejos sobre medicación o tratamientos que no fueron indicados por un profesional, algo especialmente delicado cuando se trata de la salud de una persona con discapacidad.
+
+En síntesis, lo que demuestra la evidencia internacional es que las soluciones con mayor potencial son aquellas que integran en un mismo lugar la organización personal, el acceso centralizado a información y una orientación adaptada a cada usuario, todo estructurado en una experiencia simple, clara y coherente.
+
+\subsection{Productos similares}
+
+El relevamiento del mercado y de los productos existentes permitió identificar diversas plataformas y aplicaciones con funciones parcialmente relacionadas con la propuesta de este proyecto.
+
+\begin{itemize}
+    \item CaringBridge \citep{caringbridge}: Facilita la comunicación entre pacientes, familiares y sus redes de apoyo mediante diarios y novedades compartidas, pero no ofrece orientación personalizada ni herramientas de gestión administrativa del cuidado.
+    \item Lotsa Helping Hands \citep{lotsa}: Sirve para coordinar tareas entre varios colaboradores mediante calendarios compartidos, aunque su foco está puesto en la logística grupal más que en el registro de lo que se hizo con cada persona.
+    \item Medisafe \citep{medisafe2026}: Se enfoca casi exclusivamente en la adherencia a los tratamientos a través de alertas y seguimiento de medicación, quedando acotada solo a esa dimensión específica del cuidado.
+\end{itemize}
+
+Si bien todas estas aplicaciones ofrecen funciones valiosas y apreciadas por sus usuarios, ninguna logra reunir en un mismo lugar información unificada, organización de tareas, coordinación del grupo de cuidado y orientación personalizada pensada especialmente para cuidadores de personas con discapacidad en el contexto argentino. Esta dispersión de funciones, sumada a la falta de adaptación al marco legal y burocrático local (tramitación del CUD, pensiones no contributivas, registro de prestadores, entre otros), deja en evidencia la oportunidad y la relevancia de llevar adelante este proyecto.
+
+\section{Marco teórico}
+
+\subsection{Discapacidad y cuidado informal}
+
+La Organización Mundial de la Salud (OMS) define a la discapacidad como el resultado directo de la interacción entre una condición de salud específica y las barreras del entorno (ya sean físicas, sociales o actitudinales), según su Informe Mundial sobre la Discapacidad, desarrollado de forma conjunta con el Grupo del Banco Mundial \citep{who2011}. Su informe más reciente sobre equidad en salud estima que aproximadamente el 16~\% de la población global convive con una discapacidad significativa \citep{who2022}, siendo las personas mayores las que presentan una probabilidad más alta de experimentarla en comparación con los jóvenes. El propio documento remarca que, a nivel global, las personas con discapacidad enfrentan peores resultados en materia de salud y educación, tienen una menor inclusión económica y sufren tasas de pobreza sensiblemente mayores que el resto de la población. Todo esto responde, en gran medida, a las continuas trabas para acceder a servicios esenciales como salud, educación, trabajo, transporte e información.
+
+Mirándolo desde este ángulo, el cuidado no puede limitarse únicamente a la atención médica. Incluye también el apoyo en las actividades diarias, el acompañamiento emocional, la gestión de recursos y la facilitación para que la persona participe en la sociedad. El cuidado informal se caracteriza por quedar, en su gran mayoría, en manos de familiares o allegados que no reciben remuneración ni cuentan con una formación profesional previa. La literatura científica coincide en que asumir estas tareas suele implicar una carga altísima de responsabilidades y exige reorganizar por completo la dinámica familiar. Cuando la familia puede, una parte de ese cuidado se delega en cuidadores contratados o en instituciones, lo que suma la necesidad de coordinar y supervisar a distancia. Esta realidad, está ampliamente documentada en Argentina gracias a las estadísticas del INDEC y de la Agencia Nacional de Discapacidad.
+
+\subsection{Sobrecarga y calidad de vida del cuidador}
+
+El marco teórico de referencia más utilizado para analizar la sobrecarga del cuidador es el Modelo del Proceso de Estrés (Stress Process Model), desarrollado por \citet{pearlin1990}. Este modelo explica cómo distintos estresores de origen social terminan impactando en la salud mental de los cuidadores mediante una cadena de relaciones estructurada en cinco dominios.
+
+\begin{itemize}
+    \item El contexto de cuidado (las características sociodemográficas del cuidador).
+    \item Los estresores primarios (las conductas complejas del familiar y las dificultades propias de la asistencia directa).
+    \item Los estresores secundarios (la tensión de rol y el desgaste personal e interpersonal que provoca el cuidado).
+    \item Los recursos disponibles (el apoyo social y las estrategias de afrontamiento).
+    \item Los resultados concretos en la salud física y mental de quien cuida.
+\end{itemize}
+
+Según este modelo, la sobrecarga no depende únicamente de cuán intensas sean objetivamente las tareas de cuidado, sino también de qué recursos sociales, emocionales y comunicacionales tiene la persona para afrontar semejantes exigencias. Diversos estudios que aplican esta teoría en múltiples escenarios, como en cuidadores de personas con Alzheimer, cáncer avanzado o en lista de espera para trasplantes \citep{bolden2008,zhao2022}, coinciden en que la falta de apoyo informativo y emocional profundiza el impacto de los estresores primarios en la salud del cuidador. Por el contrario, contar con buenos recursos de afrontamiento actúa como un escudo protector.
+
+Esta perspectiva es súper relevante para este proyecto, ya que brinda el sustento teórico necesario para sostener la hipótesis de que una plataforma digital capaz de centralizar información, aliviar la carga de los trámites, repartir el cuidado entre varias personas y brindar orientación personalizada funciona como un recurso de afrontamiento que amortigua el impacto de los estresores diarios del cuidado informal.
+
+En definitiva, la calidad de vida de un cuidador se sostiene sobre múltiples pilares, la red de apoyo social que posee, el acceso a información confiable, los recursos económicos disponibles y la posibilidad de disponer de herramientas prácticas que faciliten la organización de la rutina de cuidado.
+
+\subsection{Tecnologías digitales aplicadas al cuidado}
+
+Las tecnologías de la información y la comunicación han dado pie al desarrollo de múltiples soluciones de e-health orientadas a optimizar la gestión del cuidado. Este tipo de plataformas facilita el almacenamiento de datos, la coordinación de actividades, el envío de alertas y recordatorios, y la fluidez en la comunicación entre los distintos actores involucrados.
+
+Toda la evidencia académica indica que las herramientas digitales resultan sumamente efectivas cuando automatizan tareas repetitivas, centralizan la información y liberan carga cognitiva en el usuario. Un registro compartido, en el que queda asentado quién dio cada medicación o qué pasó en el día, permite además que varias personas cuiden a la misma persona sin perder información entre un turno y otro, y que la familia o la institución puedan seguir ese cuidado sin estar presentes.
+
+\subsection{Inteligencia artificial y sistemas conversacionales}
+
+La inteligencia artificial abarca un conjunto de técnicas diseñadas para ejecutar tareas que requieren de procesos vinculados al razonamiento humano. Dentro de este campo, los modelos de lenguaje y los sistemas conversacionales permiten mantener interacciones utilizando lenguaje natural y ofrecer respuestas contextualizadas al caso de uso.
+
+Revisiones sistemáticas focalizadas en agentes conversacionales con IA en el sector de la salud destacan que sus aplicaciones principales se orientan al seguimiento del tratamiento, el monitoreo de condiciones, el soporte a servicios sanitarios y la educación al paciente. En general, se reportan niveles de aceptación muy positivos por parte de los usuarios, aunque las investigaciones destacan que la evidencia científica sobre su efectividad clínica todavía es acotada dada la escasez de ensayos controlados \citep{milneives2020,binsawad2022}.
+
+Tanto las investigaciones enfocadas en cuidadores como las revisiones generales de IA conversacional en salud hacen hincapié en una advertencia indispensable. El rol de estos sistemas debe concebirse como un complemento del trabajo profesional, nunca como un reemplazo de la consulta médica. Por esa razón, y porque una respuesta generada automáticamente no siempre puede explicarse ni verificarse, en esta etapa del proyecto se optó por un sistema de recomendación explicable sobre un catálogo verificado, y el asistente conversacional queda como línea futura.
+
+\subsection{Sistemas de recomendación y personalización}
+
+Los sistemas de recomendación tienen como meta acercar contenido verdaderamente relevante a partir de las características y necesidades puntuales de cada usuario. La literatura especializada distingue principalmente dos enfoques de implementación, el filtrado colaborativo y el filtrado basado en contenido \citep{jain2025,geeksforgeeks2025}.
+
+\begin{itemize}
+    \item Filtrado colaborativo: Genera sugerencias identificando patrones de coincidencia entre distintos usuarios. Es decir, le propone a una persona aquello que resultó de utilidad para otros usuarios con perfiles o necesidades parecidas. Si bien posee una alta capacidad para hacer descubrir contenido novedoso, requiere volúmenes grandes de datos e interacciones históricas para ser preciso. Además, sufre del conocido problema del arranque en frío, cuando un usuario o un elemento son nuevos en la plataforma, no existen datos suficientes para calcular similitudes confiables. Además, depende de la calidad de las valoraciones, que pueden ser manipuladas con perfiles falsos \citep{chichani2024}.
+    \item Filtrado basado en contenido: Construye la recomendación a partir de las características del usuario y de cada ítem. Este enfoque no requiere del comportamiento de otros usuarios para funcionar, lo cual lo vuelve mucho más transparente (es posible explicar con claridad por qué se sugiere determinado contenido) y resulta adecuado para plataformas nacientes o de nicho que aún no acumulan una base grande de interacciones.
+\end{itemize}
+
+La literatura considera que las arquitecturas híbridas, que combinan ambas técnicas, aprovechan lo mejor de cada una \citep{jain2025}. En este proyecto se adoptó un enfoque híbrido simple. El filtrado basado en contenido es la base y funciona desde el primer día, mientras que las valoraciones explícitas de los cuidadores (marcar un recurso como útil o no útil) ajustan el orden de las sugerencias. Para que las valoraciones sean comparables, solo se tienen en cuenta las de cuidadores de personas con el mismo tipo de discapacidad, y su peso crece a medida que se acumulan, lo que resuelve el problema del arranque en frío.
+
+\subsection{Experiencia de usuario y accesibilidad}
+
+El diseño centrado en las personas plantea el desarrollo de productos digitales teniendo plenamente en cuenta las capacidades, necesidades y el contexto real de uso de quienes los van a utilizar. La norma ISO 9241-210, ``Ergonomía de la interacción hombre-sistema. Parte 210: Diseño centrado en el operador humano para los sistemas interactivos'', define los lineamientos y recomendaciones clave para integrar este enfoque en todo el ciclo de desarrollo de un sistema interactivo, enfatizando la importancia de involucrar activamente a los usuarios en las etapas de diseño y prueba \citep{une2019,ferreira2022}.
+
+En plataformas orientadas a cuidadores, la accesibilidad cobra un valor fundamental por la enorme disparidad de edades, niveles de instrucción y habilidades tecnológicas que caracteriza a este grupo. Entre las buenas prácticas recomendadas destacan el uso de un lenguaje claro y directo, una navegación intuitiva, la consistencia visual a lo largo de la aplicación, tipografías legibles, la posibilidad de agrandar el texto y la reducción al mínimo de los pasos necesarios para realizar cualquier acción. Todos estos principios son los que estructuran directamente las decisiones de diseño de la plataforma propuesta en este trabajo.
+
+\section{Relación entre las variables de estudio}
+
+Esta investigación analiza de qué manera se relacionan dos variables centrales.
+
+\begin{itemize}
+    \item Variable independiente: El uso de una plataforma digital inteligente de apoyo para el cuidado.
+    \item Variable dependiente: La experiencia concreta y la percepción de apoyo que sienten las personas cuidadoras.
+\end{itemize}
+
+Toda la literatura académica revisada, y en especial el Modelo del Proceso de Estrés de Pearlin, sugiere que una herramienta capaz de centralizar información, simplificar la organización diaria, repartir el cuidado entre varias personas y brindar orientación a la medida de cada usuario funciona como un recurso de afrontamiento clave. Esto ayuda a reducir la carga percibida y mejora la sensación de estar acompañado.
+
+\section{Marco conceptual}
+
+Para que hablemos un mismo idioma a lo largo de todo el trabajo, se establecen las siguientes definiciones operativas.
+
+\begin{itemize}
+    \item Cuidador informal: Aquella persona no profesional que brinda asistencia y acompañamiento habitual a una persona con discapacidad, por lo general sin recibir un pago por ello ni contar con una formación previa especializada.
+    \item Cuidador contratado: Persona que cuida de forma remunerada, contratada por una familia o empleada por una institución.
+    \item Grupo de cuidado: El conjunto de personas que participan del cuidado. Lo integran el dueño, que crea la cuenta, carga a las personas asistidas y paga el plan, los cuidadores, que registran el día a día de las personas que se les asignan, y los observadores, que solo pueden ver lo registrado.
+    \item Modo observador: La forma de uso en la que alguien ve lo que registran los cuidadores sin poder modificarlo, pensada para familias que contratan a alguien y para la dirección de una institución.
+    \item Sobrecarga del cuidador: El impacto y conjunto de secuelas físicas, emocionales y sociales que surgen debido a la acumulación de estresores (tanto primarios como secundarios) propios de la tarea de cuidar, cuando no se cuenta con los recursos de afrontamiento suficientes para sobrellevarlos.
+    \item Plataforma digital de apoyo: Un sistema informático completo que integra en un solo lugar información útil, herramientas de organización y recursos de asistencia pensados para el proceso de cuidado.
+    \item Orientación personalizada: El ofrecimiento de información o sugerencias diseñadas a la medida del perfil y las necesidades de cada persona, generadas mediante un sistema de recomendación.
+    \item Valoración explícita: La indicación que hace un cuidador sobre si un recurso recomendado le sirvió o no, que el sistema utiliza para mejorar sus sugerencias.
+    \item Accesibilidad digital: El nivel de facilidad que ofrece una herramienta para que pueda ser aprovechada sin problemas por personas con distintas capacidades o con muy variados niveles de conocimiento tecnológico.
+    \item Experiencia de usuario: La percepción integral que se forma la persona sobre qué tan útil, sencilla, clara y satisfactoria le resulta la interacción diaria con el sistema.
+\end{itemize}
+
+\section{Síntesis del capítulo}
+
+Toda la investigación consultada deja en claro que el cuidado informal de personas con discapacidad representa una problemática compleja, respaldada por datos estadísticos y con un fuerte impacto en lo organizativo, lo emocional y lo informativo. Los antecedentes en Argentina, sostenidos por cifras oficiales del INDEC y de la Agencia Nacional de Discapacidad, sacan a la luz la urgencia real de brindar herramientas de soporte a los cuidadores, en un escenario atravesado por jornadas extenuantes de cuidado no pago y una enorme fragmentación en los trámites y beneficios estatales.
+
+Por otro lado, la evidencia internacional confirma el potencial de las soluciones digitales para ofrecer orientación y facilitar la gestión del cuidado, aunque también advierte que la seguridad de las respuestas automáticas y de los consejos entre pares todavía no está suficientemente probada. Por eso la propuesta prioriza una orientación explicable, basada en fuentes verificadas y en escritos de especialistas ya publicados.
+
+El Modelo del Proceso de Estrés de Pearlin da un marco teórico sólido para comprender cómo una plataforma digital actúa como un recurso de afrontamiento frente al desgaste del cuidador, mientras que los estudios sobre sistemas de recomendación justifican un enfoque híbrido que funciona desde el primer día con el perfil de la persona y mejora con las valoraciones de otros cuidadores. Sumado a esto, el análisis del mercado permitió detectar una oportunidad clara para crear una propuesta integral hecha a la medida del contexto argentino, al tiempo que los principios de la norma ISO 9241-210 aportan el camino metodológico para garantizar que la aplicación sea realmente accesible y fácil de usar para perfiles de usuarios muy diversos.
+

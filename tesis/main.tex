@@ -1,0 +1,101 @@
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+% =============================================================
+%   Proyecto Final de Ingeniería Informática — USAL
+%   Archivo principal. Compilar con pdfLaTeX (+ biber + makeglossaries):
+%       latexmk main.tex
+% =============================================================
+
+\documentclass[%
+    language=spanish,
+    guias=false,        % entrega final: sin cajas de guía de la cátedra
+    pdfa=false,
+]{usal-proyecto-final}
+
+
+% -------------------------------------------------------------
+% DATOS DEL TRABAJO
+% -------------------------------------------------------------
+\title{Sistema inteligente de recomendación para la gestión del cuidado de personas con discapacidad en Argentina}
+\thesisHeader{Facultad de Ingeniería\\Proyecto Final de Ingeniería Informática}
+\academicYear{2026}
+\graduationDate{17/11/2026}
+
+\author{Valentina Sol Quiroz}
+\authorEmail{valentinasol.quiroz@usal.edu.ar}
+
+\decano{Walter Oscar Rodríguez Esquivel}{Decano, Facultad de Ingeniería}
+\director{Germán Buchniv}{Director de las carreras Lic. en Sistemas de Información e Ingeniería en Informática}
+\profesor{Esteban Tissera}{Profesor, Facultad de Ingeniería}
+
+\palabrasclave{cuidado de personas con discapacidad, sistema de recomendación híbrido, recomendación explicable, plataforma web, cuidadores}
+\keywords{disability care, hybrid recommender system, explainable recommendation, web platform, caregivers}
+
+% segunda página: declaración de originalidad y repositorio
+\secondpage{\input{preliminares/segunda-pagina}}
+
+% enlaces del sistema (se usan en la segunda página, el capítulo 4 y el anexo I)
+\newcommand{\repositorio}{https://github.com/valenquiroz/Tesis}
+\newcommand{\versionEntregada}{entrega-final}
+% el sistema todavia no esta publicado: su despliegue en Azure es un proximo paso
+
+
+% -------------------------------------------------------------
+% RECURSOS
+% -------------------------------------------------------------
+\addbibresource{refs.bib}
+\loadglsentries{preliminares/glosario}
+\loadglsentries{preliminares/siglas}
+\loadglsentries{preliminares/simbolos}
+\input{custom-symbols}
+
+\setcounter{tocdepth}{2}
+
+% páginas con el espacio sobrante al pie, sin estirar los párrafos
+\raggedbottom
+
+% glosario, siglas y símbolos sin números de página (las entradas se agregan con \glsaddall)
+\renewcommand{\glosarios}{%
+    \cleardoublepage
+    \bookmarksetup{startatroot}
+    \printglossary[type=main, nonumberlist]
+    \printglossary[type=\acronymtype, nonumberlist]
+    \printglossary[type=symbols, nonumberlist]
+}
+
+
+% =============================================================
+\begin{document}
+
+    \frontmatter
+
+    \mainmatter
+    \input{capitulos/01-introduccion}
+    \glsresetall
+    \input{capitulos/02-metodologia}
+    \input{capitulos/03-marco-teorico}
+    \input{capitulos/04-marco-tecnologico}
+    \input{capitulos/05-justificacion-economica}
+    \input{capitulos/06-riesgos}
+    \input{capitulos/07-resultados}
+    \input{capitulos/08-conclusiones}
+
+    \backmatter
+
+    % apéndices: material producido por la autora
+    \begin{appendices}
+        \input{apendices/A-encuesta-validacion}
+        \input{apendices/B-detalles-tecnicos}
+        \input{apendices/C-registro-ia}
+    \end{appendices}
+
+    % anexos: material externo
+    \begin{anexos}
+        \input{anexos/I-repositorios}
+    \end{anexos}
+
+    % glosario, siglas y símbolos: se imprimen todas las entradas definidas
+    \glsaddall
+    \glosarios
+
+\end{document}

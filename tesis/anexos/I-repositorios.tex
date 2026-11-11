@@ -1,0 +1,28 @@
+%!TEX root = ../main.tex
+% ANEXO I — Repositorio de código fuente
+
+\chapter{Repositorio de código fuente}\label{anx:repositorios}
+
+\section{Acompañar}
+
+\begin{itemize}
+    \item \textbf{Enlace:} \url{\repositorio}
+    \item \textbf{Versión evaluada:} etiqueta \texttt{\versionEntregada}
+    \item \textbf{Ejecución:} entorno local con los datos de demostración (apéndice~B y README del repositorio). La publicación en Azure queda como próximo paso.
+    \item \textbf{Documento:} las fuentes en \LaTeX{} y el PDF de esta tesis están en la carpeta \texttt{tesis/} del mismo repositorio.
+    \item \textbf{Licencia:} MIT.
+    \item \textbf{Estado:} activo
+\end{itemize}
+
+El repositorio contiene el código completo del sistema, organizado principalmente en dos
+carpetas. \texttt{backend/} tiene la API en ASP.NET Core
+(\texttt{Cuida.Api}) y las pruebas automatizadas (\texttt{Cuida.Tests}), y
+\texttt{frontend/} tiene la interfaz en React con Vite. El archivo
+\texttt{README.md} de la raíz explica la instalación, la ejecución y las
+cuentas de demostración. Los datos de
+demostración se cargan con el propio backend al iniciarlo con la opción
+\texttt{Demo:Cargar}, y la documentación técnica está en la carpeta
+\texttt{docs/}. Las instrucciones para levantarlo están en el apéndice
+\ref{apx:tecnicos}. Las claves y contraseñas no forman parte del
+repositorio: se configuran en un archivo local excluido del control de
+versiones.

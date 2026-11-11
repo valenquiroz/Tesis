@@ -1,0 +1,90 @@
+%!TEX root = ../main.tex
+% APÉNDICE B — Detalles técnicos e implementación
+
+\chapter{Detalles técnicos e implementación}\label{apx:tecnicos}
+
+Este apéndice reúne la información necesaria para reproducir el sistema a
+partir del repositorio (anexo~\ref{anx:repositorios}).
+
+\section{Versiones de las tecnologías}
+
+\begin{table}[H]
+\centering
+\caption{Versiones utilizadas}\label{tab:versiones}
+\small
+\begin{tabularx}{\textwidth}{l l >{\raggedright\arraybackslash}X}
+\toprule
+\tb{Componente} & \tb{Versión} & \tb{Uso} \\
+\midrule
+.NET & 10.0 & Plataforma del backend y de las pruebas \\
+ASP.NET Core (API, Identity, JWT Bearer) & 10.0.12 & API REST, cuentas de usuario y autenticación por token \\
+Entity Framework Core (SQL Server) & 10.0.12 & Acceso a datos y migraciones \\
+Swashbuckle.AspNetCore & 10.2.3 & Documentación interactiva de la API \\
+SQL Server Express & -- & Base de datos en el entorno de desarrollo \\
+Azure SQL Database & -- & Base de datos prevista para la publicación (próximo paso) \\
+React y React DOM & 19.2 & Interfaz de usuario \\
+Vite & 8.3 & Servidor de desarrollo y empaquetado del frontend \\
+oxlint & 1.81 & Análisis estático del frontend \\
+xUnit & 2.9.3 & Pruebas automatizadas \\
+Entity Framework Core (SQLite) & 10.0.12 & Base en memoria para las pruebas \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Esquema de datos}
+
+El esquema se define con clases de C\# y se versiona con 18
+\glspl{migracion} de Entity Framework Core. Las entidades principales son
+las siguientes.
+
+\begin{itemize}
+    \item \texttt{ApplicationUser}: cuenta de usuario, con su plan y el nombre de su grupo.
+    \item \texttt{PersonaAsistida}: perfil de la persona (tipo de discapacidad, obra social, localidad, necesidades) y su dueño.
+    \item \texttt{PersonaCompartida}: integrantes del grupo que acompañan a cada persona, con su rol (cuidador u observador).
+    \item \texttt{Medicamento}, \texttt{Turno}, \texttt{EntradaDiario} y \texttt{Documento}: registros del cuidado diario.
+    \item \texttt{TramitePersona}: avance de cada paso de la guía de trámites.
+    \item \texttt{RecursoRecomendable} y \texttt{ValoracionRecurso}: catálogo de recursos y valoraciones de los cuidadores.
+    \item \texttt{ArticuloRecomendado}: artículos de especialistas por tipo de discapacidad.
+    \item \texttt{ContactoEmergencia} y \texttt{Bienestar}: red de apoyo y autoevaluaciones del cuidador.
+\end{itemize}
+
+\section{Variables de configuración}
+
+\begin{table}[H]
+\centering
+\caption{Variables de configuración del backend y del frontend}\label{tab:variables}
+\small
+\begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}X}
+\toprule
+\tb{Variable} & \tb{Propósito} \\
+\midrule
+\texttt{ConnectionStrings:DefaultConnection} & Cadena de conexión a la base de datos \\
+\texttt{Jwt:Key} & Clave para firmar los tokens. No se guarda en el repositorio \\
+\texttt{Jwt:Issuer}, \texttt{Jwt:Audience} & Emisor y destinatario de los tokens \\
+\texttt{Cors:OrigenesPermitidos} & Orígenes del frontend autorizados a llamar a la API \\
+\texttt{Frontend:Url} & Dirección del frontend, usada en los correos \\
+\texttt{Correo:Servidor} y relacionadas & Servidor de correo para recuperar la contraseña \\
+\texttt{Almacenamiento:CarpetaDocumentos} & Carpeta donde se guardan los documentos subidos \\
+\texttt{Demo:Cargar}, \texttt{Demo:Renovar} & Carga y actualización de los datos de demostración \\
+\texttt{VITE\_API\_URL} & Dirección de la API que usa el frontend \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Ejecución local}
+
+Requisitos: SDK de .NET 10, Node.js 22 o superior, SQL Server Express (instancia \texttt{.\textbackslash SQLEXPRESS}) y la herramienta de Entity Framework (\texttt{dotnet tool install --global dotnet-ef}). Antes del primer arranque hay que copiar \texttt{appsettings.Local.example.json} como \texttt{appsettings.Local.json} y completar una clave JWT de al menos 32 caracteres. Ese archivo está excluido del repositorio para que los secretos no se publiquen.
+
+\begin{lstlisting}[caption={Pasos para levantar el sistema en un entorno local}, label={lst:ejecucion}]
+git clone https://github.com/valenquiroz/Tesis.git
+cd Tesis/backend/Cuida.Api
+copy appsettings.Local.example.json appsettings.Local.json
+(editar Jwt:Key en appsettings.Local.json)
+dotnet ef database update
+dotnet run --launch-profile http --Demo:Cargar=true
+cd ../../frontend
+npm install
+npm run dev
+\end{lstlisting}
+
+El parámetro \texttt{--Demo:Cargar=true} carga las familias, la residencia, los recursos y los artículos de demostración. El README del repositorio detalla las cuentas de prueba y, en Windows, el archivo \texttt{iniciar.bat} levanta el backend y el frontend juntos.

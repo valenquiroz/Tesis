@@ -1,0 +1,79 @@
+%!TEX root = ../main.tex
+
+\chapter{Introducción}\label{cap:introduccion}
+
+\section{Descripción del problema}
+
+El cuidado de una persona con discapacidad suele quedar en manos de un familiar cercano, que asume esa responsabilidad sin contar con formación específica ni con herramientas adecuadas. Este cuidador tiene que encargarse al mismo tiempo de los medicamentos, los turnos médicos, los estudios, los trámites, y también decidir qué organismos, programas o centros de salud son los más adecuados según el diagnóstico y la cobertura médica. Toda esta información se encuentra dispersa, ya sea en papeles, en charlas informales con otros cuidadores o en búsquedas constantes en internet.
+
+En la práctica, esta falta de organización y de acceso claro a la información genera situaciones problemáticas frecuentes. Es común que muchas personas lleguen a clínicas, hospitales o centros de atención sin saber qué trámite deben realizar, qué documentación presentar o incluso si cuentan con la cobertura necesaria para ser atendidos. Esto provoca demoras, rechazos en la atención, pérdida de turnos y una gran carga de frustración tanto para el paciente como para el cuidador. En muchos casos, los cuidadores deben ir y venir varias veces entre instituciones, repetir gestiones o depender de la ayuda informal de otros usuarios para poder avanzar. Esta desinformación no solo impacta en lo administrativo, sino que también retrasa diagnósticos, tratamientos y seguimientos médicos.
+
+A esto se suma que el cuidado muchas veces no lo hace una sola persona. Hay familias que contratan a alguien para que acompañe a su familiar durante el día y que necesitan saber qué pasó sin estar presentes, y hay clínicas y residencias donde varios empleados atienden a muchos pacientes. En esos casos, la información queda repartida entre cuadernos, mensajes y la memoria de cada uno.
+
+Este proyecto propone una plataforma web, adaptada al celular, pensada para quienes cuidan, ya sean familiares, cuidadores contratados o instituciones, que permita centralizar la gestión del cuidado e incorpore un componente inteligente. Se trata de un sistema de recomendación que, a partir del perfil de la persona (tipo de discapacidad, cobertura médica, localidad y necesidades específicas), sugiere qué recursos, programas, centros y trámites le corresponden y explica por qué. El sistema también tiene en cuenta las valoraciones de otros cuidadores de personas con la misma discapacidad, de modo que sus sugerencias mejoran con el uso.
+
+\section{Objetivo}
+
+El objetivo principal de este proyecto es desarrollar una plataforma web, accesible también desde el celular, que centralice la información y las tareas cotidianas del cuidado de personas con discapacidad, permita coordinar a quienes participan de ese cuidado, e incorpore un sistema de recomendación híbrido que personalice las sugerencias según el perfil de la persona y la experiencia acumulada de otros cuidadores en situaciones similares.
+
+Para alcanzar este objetivo, se proponen los siguientes objetivos específicos.
+
+\begin{itemize}
+    \item Desarrollar un sistema de recomendación que combine el perfil de la persona con las valoraciones de otros cuidadores, para sugerir recursos, programas y trámites ordenados por relevancia y explicados.
+    \item Permitir que el cuidado se organice en grupos, en los que el dueño de la cuenta, ya sea una familia o una institución, suma cuidadores que registran el día a día y observadores que pueden ver lo registrado sin modificarlo, y puede seguir el trabajo de cada uno.
+    \item Incorporar un módulo de emergencia con contacto directo al SAME y a una red de apoyo personal, garantizando una respuesta rápida ante situaciones críticas.
+    \item Diseñar una interfaz accesible e intuitiva que pueda ser utilizada por cuidadores con distintos niveles de familiaridad tecnológica, contemplando también el acceso desde dispositivos móviles.
+    \item Guiar los trámites que corresponden según el tipo de discapacidad, a partir de normativa y fuentes oficiales.
+    \item Reunir artículos ya publicados por especialistas, organizados por tipo de discapacidad y con acceso a su fuente original.
+\end{itemize}
+
+\section{Barreras}
+
+Desarrollar una plataforma para cuidadores no es lo mismo que desarrollar una app de uso cotidiano. Acá las decisiones que toma el usuario afectan directamente la salud de otra persona.
+
+El primer obstáculo es la credibilidad. Si el sistema le sugiere a un cuidador un recurso o cómo hacer un trámite, la primera reacción natural es desconfiar. Nadie va a seguir una recomendación automática si no entiende por qué se la están haciendo. Para que la plataforma realmente se use, las sugerencias tienen que estar explicadas con claridad y las primeras veces que alguien la usa tiene que sentir que le sirvió de algo.
+
+Otro problema concreto es que en Argentina la información sobre programas, centros de salud y coberturas médicas está dispersa, desactualizada o directamente no existe en formato digital. Para que el sistema pueda hacer sugerencias útiles, alguien tiene que construir esa base de datos primero y después mantenerla.
+
+También se identifican barreras relacionadas con la adopción tecnológica por parte de los usuarios. El perfil del cuidador incluye personas mayores, con escasa experiencia en el uso de aplicaciones, o que atraviesan situaciones de sobrecarga emocional que reducen su tolerancia a herramientas complejas. Si la plataforma no es simple de usar desde el primer momento, la mayoría no va a volver a abrirla, por lo que la interfaz deberá estar diseñada con criterios de accesibilidad y simplicidad.
+
+En cuanto a la privacidad, la plataforma maneja datos de salud, que son datos sensibles. Eso implica cumplir con la Ley de Protección de Datos Personales y tener claro desde el inicio cómo se guarda la información y quién puede acceder a ella, sobre todo cuando a una misma persona la cuidan varios familiares, un cuidador contratado o los empleados de una institución.
+
+Por la misma razón, se descartó incluir un foro abierto entre cuidadores. Aunque el intercambio de experiencias tiene valor, un comentario sobre una medicación o un tratamiento puede llevar a otra persona a cambiar una indicación médica y perjudicar la salud de quien cuida. La plataforma se apoya, en cambio, en información verificada y en escritos de especialistas ya publicados.
+
+Finalmente, la sostenibilidad del proyecto a largo plazo representa un desafío en términos económicos y operativos. Mantener actualizado el catálogo de recursos y artículos y garantizar el funcionamiento técnico de la plataforma requiere un modelo de funcionamiento que excede el alcance del prototipo inicial.
+
+\section{Relevancia del proyecto}
+
+La propuesta de una plataforma inteligente para cuidadores de personas con discapacidad responde a una necesidad en Argentina. Según datos del INDEC, aproximadamente el 10~\% de la población presenta algún tipo de discapacidad \citep{indec2018}, lo que implica que millones de familias enfrentan cotidianamente los desafíos de la gestión del cuidado. Sin embargo, las herramientas digitales disponibles en el país para este perfil de usuario son escasas y raramente integradas con componentes de inteligencia artificial.
+
+El proyecto adquiere relevancia al abordar dos puntos. Por un lado, resuelve un problema práctico y urgente, organizar, en un solo lugar, toda la información que el cuidador necesita para tomar decisiones informadas sobre la atención de su familiar. Por el otro, introduce el sistema de recomendación híbrido, que va más allá de la simple gestión de datos y aporta valor real a través de la personalización y el aprendizaje colaborativo.
+
+A nivel social, la plataforma tiene el potencial de reducir los tiempos y costos asociados a la búsqueda de información, disminuir la carga cognitiva y emocional del cuidador, y mejorar la calidad de atención que recibe el paciente. Para las familias que contratan a alguien, permite saber cómo se cuida a su familiar sin estar presentes, y para las instituciones, controlar que la medicación se registre a tiempo. En términos de impacto en el sistema de salud, una mejor orientación de los cuidadores puede redundar en menos consultas innecesarias, menos rechazos en la atención y diagnósticos más oportunos.
+
+A nivel técnico, combinar recomendaciones personalizadas con el contexto específico del cuidador en Argentina es algo que todavía no está muy explorado. Hay investigación sobre sistemas de recomendación en salud a nivel global, pero pocas propuestas pensadas puntualmente para quien cuida a otro.
+
+Por último, aunque el proyecto arranca como un prototipo, está pensado para poder crecer. Si funciona bien en un contexto inicial, la misma base podría adaptarse a otros tipos de discapacidad y a otras regiones del país.
+
+\section{Hipótesis de investigación}
+
+¿Es posible centralizar en una sola herramienta la información dispersa que necesita un cuidador de personas con discapacidad, brindándole un punto de apoyo concreto en un rol que suele ejercerse sin orientación ni acompañamiento?
+
+\section{Enfoque}
+
+El proyecto parte de una necesidad concreta, los cuidadores de personas con discapacidad no tienen un lugar donde encontrar toda la información que necesitan. Hoy esa información está dispersa entre papeles, búsquedas en internet y conversaciones informales con otros cuidadores. La plataforma busca resolver eso.
+
+Para construirla de forma que realmente sirva, se prevé trabajar directamente con cuidadores. Se plantean entrevistas y encuestas para entender cómo organizan hoy el cuidado, qué información les cuesta más conseguir, qué trámites les generan más dificultades y qué esperarían de una herramienta como esta. También se prevén entrevistas a distintos especialistas, para conocer las inquietudes o preguntas que suelen hacer las personas que tienen a cargo a alguien con discapacidad. Esa información es la base para tomar decisiones de diseño, asegurando que la plataforma responda a necesidades reales y no solo a suposiciones.
+
+El sistema de recomendación combina dos fuentes de información, el perfil de la persona, que incluye su tipo de discapacidad, cobertura médica, localidad y necesidades, y las valoraciones de otros cuidadores que atraviesan situaciones similares. Con eso, el sistema sugiere recursos, programas y trámites ordenados por relevancia para cada caso particular, explica cada sugerencia y mejora a medida que más personas lo usan.
+
+El desarrollo se hizo sobre un prototipo funcional probado con datos de demostración, que representan familias, cuidadores contratados y una institución ficticia. La idea es validar que las recomendaciones sean útiles y que la plataforma sea fácil de usar incluso para personas que no tienen mucha familiaridad con la tecnología.
+
+\section{Recursos}
+
+El proyecto es desarrollado por una sola persona, que asume todas las etapas del proceso, el relevamiento de necesidades, el diseño de la interfaz, la programación de la plataforma y el desarrollo del sistema de recomendación. Dado ese alcance, la meta no es construir una aplicación lista para salir al mercado, sino un prototipo funcional que permita validar que el enfoque propuesto realmente resuelve el problema.
+
+Para el desarrollo se necesitan herramientas de programación, bases de datos y servicios en la nube que permitan construir y probar el sistema de recomendación sin incurrir en costos elevados. La elección de cada herramienta depende de qué tan bien se adapta al tipo de procesamiento que requiere el proyecto y de que permita crecer si en algún momento se decide escalar la plataforma.
+
+En cuanto al respaldo académico, se trabaja con bibliografía especializada en sistemas de recomendación aplicados a contextos de salud, estudios e investigaciones sobre la situación del cuidador en Argentina, y la normativa vigente en materia de protección de datos personales y manejo de información sensible. Este material respalda las decisiones de diseño e implementación a lo largo del proyecto.
+

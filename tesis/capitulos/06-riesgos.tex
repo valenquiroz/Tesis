@@ -1,0 +1,95 @@
+%!TEX root = ../main.tex
+
+\chapter{Análisis de riesgos}\label{cap:riesgos}
+
+\section{Introducción}
+
+En este capítulo se identifican y analizan los principales riesgos asociados al desarrollo del ``Sistema inteligente de recomendación para la gestión del cuidado de personas con discapacidad en Argentina''. Debido a que el proyecto se encuentra en una etapa de prototipo y contempla una futura implementación con servicios tecnológicos externos, resulta necesario anticipar situaciones que puedan afectar su alcance, sus plazos, su calidad, la seguridad de la información y su continuidad.
+
+El análisis contempla riesgos de las etapas de investigación y planificación, desarrollo, validación, despliegue y operación. Para cada riesgo se describen su causa, el evento que podría ocurrir y sus posibles efectos. Además, se estima su probabilidad e impacto, se calcula su exposición y se define una estrategia de respuesta, un responsable y una contingencia. Respecto de la versión anterior, se retiraron los riesgos vinculados con la comunidad de cuidadores, que dejó de formar parte de la propuesta, y se incorporaron los que surgen de los grupos de cuidado, en los que una familia o una institución suma a cuidadores con su propia cuenta, y del modelo de planes.
+
+\section{Criterios de evaluación}
+
+La probabilidad y el impacto se valoran en una escala de 1 a 5. La probabilidad expresa la posibilidad de ocurrencia del riesgo, mientras que el impacto representa la magnitud de sus consecuencias sobre el proyecto. La exposición se obtiene multiplicando ambos valores (Exposición = Probabilidad $\times$ Impacto), con un resultado posible de 1 a 25.
+
+\begin{table}[H]
+\centering
+\caption{Escala de probabilidad e impacto}\label{tab:c6-1}
+\small
+\begin{tabularx}{\textwidth}{l l l}
+\toprule
+\tb{Valor} & \tb{Probabilidad} & \tb{Impacto} \\
+\midrule
+1 & Muy baja & Insignificante \\
+2 & Baja & Menor \\
+3 & Media & Moderado \\
+4 & Alta & Grave \\
+5 & Muy alta & Crítico \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Para facilitar la lectura, se consideran orientativamente los siguientes niveles de exposición. De 1 a 5 bajo, de 6 a 10 moderado, de 11 a 15 alto y de 16 a 25 muy alto.
+
+\section{Registro y respuesta a los riesgos}
+
+La siguiente matriz reúne los riesgos identificados, ordenados por exposición de mayor a menor. Cada riesgo se redacta con su causa, el evento posible y su efecto, y se clasifica por naturaleza (alcance, técnico, recursos, terceros, datos y cumplimiento) y por etapa (antes de arrancar, durante el desarrollo, pasaje a producción y operación). Los riesgos R7 y R13 son externos al proyecto. La respuesta indica la estrategia elegida: mitigar, evitar o aceptar.
+
+\begin{landscape}
+{\scriptsize
+\begin{xltabular}{\linewidth}{p{0.6cm} >{\raggedright\arraybackslash}p{4.9cm} >{\raggedright\arraybackslash}p{1.6cm} >{\raggedright\arraybackslash}p{1.6cm} p{0.25cm} p{0.25cm} >{\raggedright\arraybackslash}p{1.55cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{1.6cm} >{\raggedright\arraybackslash}p{3.4cm}}
+\caption{Matriz de riesgos, ordenada por exposición}\label{tab:c6-2}\\
+\toprule
+\tb{ID} & \tb{Riesgo} & \tb{Naturaleza} & \tb{Etapa} & \tb{P} & \tb{I} & \tb{Exp.} & \tb{Respuesta} & \tb{Responsable} & \tb{Contingencia} \\
+\midrule
+\endfirsthead
+\toprule
+\tb{ID} & \tb{Riesgo} & \tb{Naturaleza} & \tb{Etapa} & \tb{P} & \tb{I} & \tb{Exp.} & \tb{Respuesta} & \tb{Responsable} & \tb{Contingencia} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+R5 & Debido a que el motor depende de un catálogo acotado y de criterios de perfil definidos por la autora, podría ocurrir que las sugerencias no se ajusten a la situación de cada persona, lo que provocaría desconfianza y abandono de la sección de recursos. & Técnico & Durante el desarrollo & 3 & 5 & 15 (Alto) & Mitigar: explicar cada recomendación, combinar el perfil con las valoraciones y probar perfiles representativos. & Desarrolladora & Ocultar las recomendaciones dudosas y mostrar los recursos por categoría mientras se ajusta el motor. \\
+R1 & Debido a que la convocatoria depende de la disponibilidad de personas cuidadoras, podría ocurrir que se reciban pocas respuestas a la encuesta, lo que provocaría conclusiones poco representativas. & Terceros & Antes de arrancar & 3 & 4 & 12 (Alto) & Mitigar: difundir el formulario por varios canales y ampliar el período de recepción. & Responsable del proyecto & Acotar el alcance de las conclusiones y declararlas como preliminares. \\
+R2 & Debido a que la información sobre recursos y trámites está dispersa y cambia, podría ocurrir que el catálogo incluya enlaces rotos o datos vencidos, lo que provocaría orientaciones incorrectas. & Datos & Durante y en operación & 3 & 4 & 12 (Alto) & Mitigar: priorizar fuentes oficiales, verificar cada enlace antes de publicarlo y revisarlos periódicamente. & Responsable del proyecto & Desactivar el recurso desde la administración, verificarlo y publicar la corrección. \\
+R3 & Debido a que todo el desarrollo está a cargo de una sola persona, podría ocurrir una enfermedad o una sobrecarga de tareas, lo que provocaría demoras en las entregas. & Recursos & Durante el desarrollo & 3 & 4 & 12 (Alto) & Mitigar: trabajar en entregas pequeñas, documentar las decisiones y reservar margen en el cronograma. & Desarrolladora & Repriorizar y asegurar primero las funciones esenciales. \\
+R4 & Debido a que la API, la base de datos y la interfaz se desarrollan por separado, podría ocurrir que no funcionen juntas, lo que provocaría retrasos y errores en el sistema. & Técnico & Durante el desarrollo & 3 & 4 & 12 (Alto) & Mitigar: definir contratos de la API, integrar por etapas y probar de extremo a extremo. & Desarrolladora & Volver a la última versión estable y corregir la integración antes de seguir. \\
+R7 & Debido a que los organismos públicos no ofrecen interfaces de acceso, como en el caso del SAME, podría ocurrir que no sea posible integrarse con ellos, lo que provocaría funciones más limitadas que las previstas. & Terceros (externo) & Pasaje a producción & 4 & 3 & 12 (Alto) & Evitar: no depender de integraciones no confirmadas y usar enlaces directos a las fuentes oficiales. & Responsable del proyecto & Mantener la función informativa sin integración y reevaluar cuando existan interfaces públicas. \\
+R8 & Debido a que quienes cuidan tienen distintos niveles de familiaridad tecnológica, podría ocurrir que la navegación no les resulte clara, lo que provocaría que dejen de usar la plataforma. & Técnico & Pasaje a producción & 3 & 4 & 12 (Alto) & Mitigar: lenguaje claro, letra ampliable, alto contraste y pruebas con usuarios reales. & Responsable del proyecto & Corregir los problemas de mayor impacto y repetir las pruebas. \\
+R9 & Debido a que el proyecto se sostiene con las suscripciones Intermedio y Plus, podría ocurrir que pocas familias o instituciones paguen un plan, lo que provocaría ingresos insuficientes para cubrir los costos. & Recursos & Operación & 3 & 4 & 12 (Alto) & Mitigar: mantener gratis lo esencial, validar el interés antes del lanzamiento y revisar el flujo de fondos. & Responsable del proyecto & Reducir gastos no esenciales y revisar precios y límites de los planes. \\
+R10 & Debido a que los cuidadores contratados y los empleados rotan, podría ocurrir que alguien que dejó de trabajar siga en el grupo, lo que provocaría acceso indebido a datos de salud. & Datos & Operación & 3 & 4 & 12 (Alto) & Mitigar: permitir que el dueño quite integrantes en cualquier momento y mostrar siempre quién forma el grupo. & Responsable del proyecto & Quitar el acceso de inmediato y revisar lo registrado en el período. \\
+R12 & Debido a que durante el proyecto surgen nuevas ideas de funciones, podría ocurrir que el alcance no se cierre a tiempo, lo que provocaría no llegar a la entrega final con el sistema estable. & Alcance & Durante el desarrollo & 4 & 3 & 12 (Alto) & Evitar: congelar el alcance a partir del 3 de noviembre y registrar las ideas nuevas como trabajo futuro. & Responsable del proyecto & Postergar las funciones no esenciales a una versión posterior. \\
+R14 & Debido a que la demostración depende de la versión local y del equipo disponible en el aula, podría ocurrir que el sistema no esté disponible durante la defensa, lo que provocaría no poder mostrarlo. & Técnico & Pasaje a producción & 3 & 4 & 12 (Alto) & Mitigar: grabar un video de la demostración y tener una versión local lista para ejecutar. & Responsable del proyecto & Mostrar el video o la versión local con los datos de demostración. \\
+R6 & Debido a que la plataforma maneja datos de salud y varias personas acceden a una misma persona asistida, podría ocurrir un error de autorización, lo que provocaría la exposición o modificación indebida de información sensible. & Datos & Operación & 2 & 5 & 10 (Moderado) & Mitigar: centralizar el control de acceso en un servicio cubierto por pruebas, cifrar las comunicaciones y los datos y hacer copias de seguridad. & Desarrolladora & Restringir el acceso afectado, corregir la falla y comunicar el incidente según la normativa. \\
+R15 & Debido a que la Ley 25.326 regula el tratamiento de datos personales sensibles, podría ocurrir que la base de datos no cumpla los requisitos de inscripción y consentimiento antes del lanzamiento, lo que provocaría sanciones y la suspensión del servicio. & Cumplimiento & Pasaje a producción & 2 & 5 & 10 (Moderado) & Mitigar: pedir consentimiento informado al crear la cuenta e inscribir la base antes del lanzamiento comercial. & Responsable del proyecto & Suspender el alta de usuarios hasta regularizar la situación. \\
+R11 & Debido a que el panel del grupo muestra tomas sin registrar o registradas tarde, podría ocurrir que una institución lo use como medida directa del desempeño, lo que provocaría conflictos con su personal o conclusiones equivocadas. & Cumplimiento & Operación & 3 & 3 & 9 (Moderado) & Mitigar: presentar los indicadores como orientativos y explicar qué mide cada uno. & Responsable del proyecto & Ajustar los indicadores a partir de los comentarios de las instituciones. \\
+R16 & Debido a que el proyecto depende de su autora, podría ocurrir que nadie mantenga el catálogo ni el sistema después de la entrega, lo que provocaría información desactualizada y fallas sin corregir. & Recursos & Operación & 3 & 3 & 9 (Moderado) & Mitigar: documentar el sistema y la carga de contenidos para que otra persona pueda continuarlo. & Responsable del proyecto & Desactivar los contenidos sin revisar y mostrar la fecha de la última verificación. \\
+R13 & Debido a que los servicios de Azure y las comisiones de cobro se pagan en dólares, podría ocurrir una suba de tarifas o del tipo de cambio, lo que provocaría mayores costos operativos. & Terceros (externo) & Operación & 3 & 2 & 6 (Moderado) & Aceptar: los costos operativos representan menos del 25~\% de los ingresos de cada año del escenario base, por lo que una suba moderada no compromete la viabilidad. & Responsable del proyecto & Revisar los precios de los planes o pasar a un plan de infraestructura más económico. \\
+\end{xltabular}
+}
+\end{landscape}
+
+\section{Supuestos}
+
+\begin{itemize}
+    \item Se considera que el desarrollo inicial será realizado por una única desarrolladora, tal como se establece en la planificación del proyecto.
+    \item Se supone que se podrá acceder a personas cuidadoras para realizar encuestas, entrevistas y actividades de validación, aunque su disponibilidad y participación pueden variar.
+    \item Se supone que los servicios tecnológicos elegidos (frontend web, API, base de datos y alojamiento en la nube) estarán disponibles bajo condiciones compatibles con una implementación de pequeña escala.
+    \item Se considera que la plataforma brindará información y herramientas de organización como apoyo complementario, sin reemplazar el diagnóstico, la atención ni las decisiones de profesionales de la salud.
+    \item Se supone que podrán consultarse fuentes oficiales y publicaciones de especialistas para verificar la información sobre recursos, trámites, servicios y artículos incluidos en la plataforma.
+    \item Se considera que una parte de las familias que coordinan a varias personas estará dispuesta a pagar un plan, y que las instituciones encontrarán valor en la supervisión de su personal, aunque ambas cosas deberán validarse.
+\end{itemize}
+
+\section{Restricciones}
+
+\begin{itemize}
+    \item El sistema no reemplaza la atención médica ni ofrece diagnósticos o indicaciones clínicas. Su función se limita al acompañamiento informativo y organizativo.
+    \item El tratamiento de datos personales deberá ajustarse a la normativa aplicable y requerirá medidas de seguridad y privacidad acordes con la sensibilidad de la información, incluido el acceso de personas contratadas y de empleados de instituciones.
+    \item Los costos de infraestructura, servicios y comisiones de cobro se encuentran sujetos a las condiciones comerciales, límites de consumo e impuestos vigentes de los proveedores.
+    \item La fase de prototipo se desarrolla bajo una restricción de presupuesto monetario inicial baja, priorizando el uso de herramientas gratuitas, de código abierto o licencias de estudiantes. Por esta razón, el cobro de los planes se encuentra simulado y no está conectado con una pasarela de pagos real.
+\end{itemize}
+
+\section{Seguimiento de los riesgos}
+
+El registro de riesgos deberá revisarse al cierre de cada etapa relevante y ante cambios en el alcance, la arquitectura, los proveedores o las condiciones de validación. Durante el desarrollo, se recomienda actualizar el estado de cada riesgo, verificar si las acciones preventivas se realizaron y registrar la aparición de señales de alerta. Cuando un riesgo se materialice, se aplicará la contingencia definida y se documentarán las medidas adoptadas y sus resultados. Los riesgos de mayor exposición, en particular los vinculados con la seguridad y el acceso a los datos, la calidad de las recomendaciones, la disponibilidad de recursos y la sostenibilidad económica, deberán revisarse con prioridad.
+

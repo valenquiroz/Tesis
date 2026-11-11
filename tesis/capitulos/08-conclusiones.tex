@@ -1,0 +1,170 @@
+%!TEX root = ../main.tex
+
+\chapter{Implicancias, conclusiones y recomendaciones}\label{cap:conclusiones}
+
+\section{Implicancias}
+
+\subsection{Relevancia teórica}
+
+El trabajo aporta una lectura aplicada del Modelo del Proceso de Estrés de Pearlin al diseño de software. En ese modelo, los recursos disponibles, como el apoyo social y la información, amortiguan el efecto de los estresores sobre la salud de quien cuida. La plataforma traduce esos recursos en funciones concretas. La guía de trámites y las recomendaciones atienden la falta de información, la línea del día y la medicación ordenan los estresores primarios, y el grupo de cuidado reparte la carga entre varias personas, lo que apunta a los estresores secundarios, como la tensión de rol.
+
+También propone una forma de pensar la recomendación en un dominio sensible. La literatura revisada en el Capítulo 3 advierte que la seguridad de las respuestas automáticas y de los consejos entre pares todavía no está suficientemente probada. Frente a eso, el trabajo plantea un recomendador que solo sugiere recursos de fuentes verificadas, que explica cada sugerencia y que aprende de las valoraciones de cuidadores de personas con el mismo tipo de discapacidad. Es un modelo híbrido simple, pero transparente, que funciona desde el primer día y no depende de tener muchos usuarios para ser útil.
+
+Por último, el proyecto amplía la idea de cuidador que suele tomar la literatura. El cuidado de una persona con discapacidad muchas veces no lo ejerce una sola persona, sino una red formada por familiares, cuidadores contratados y, en algunos casos, el personal de una institución. Modelar esa red, con roles y permisos distintos, es una perspectiva que no aparecía en los productos ni en los antecedentes nacionales relevados.
+
+\subsection{Impacto práctico}
+
+Los hallazgos tienen aplicación directa. Una familia puede organizar en un solo lugar los turnos, la medicación, los documentos y los trámites de la persona que cuida, y saber por qué se le recomienda cada recurso. Si contrata a un cuidador, puede ver lo que registra sin estar presente, y si el cuidado se reparte entre hermanos o parientes, todos ven la misma información. Para una institución, el panel del grupo permite detectar tomas de medicación que no se registraron, como mostró la prueba con los datos de demostración, en la que la diferencia entre los dos empleados se vio con claridad.
+
+Para el área de la discapacidad, la guía de trámites basada en normativa oficial y la revisión de los enlaces muestran que es posible ofrecer información confiable, siempre que se cite su fuente y se revise de forma periódica.
+
+\subsection{Innovación y tecnología}
+
+El aporte tecnológico no está en el uso de una técnica nueva, sino en la combinación de técnicas conocidas en un contexto donde no se habían aplicado. Se destacan tres decisiones. La primera es un motor de recomendación explicable, implementado sin librerías externas, que separa el porcentaje de coincidencia con el perfil del orden que surge de las valoraciones, para que el número que ve el usuario siga teniendo sentido. La segunda es un control de acceso centralizado en un único servicio, que decide para cada persona si un usuario puede verla, registrar en ella o administrarla, y que está cubierto por pruebas automatizadas. La tercera es una interfaz que se adapta al rol y al plan, que no esconde lo que no está disponible, sino que explica qué plan lo incluye.
+
+\subsection{Relevancia social y económica}
+
+Según los datos citados en el Capítulo 1, alrededor del 10~\% de la población argentina tiene algún tipo de discapacidad, y buena parte de su cuidado recae en familiares sin orientación. Una herramienta gratuita en lo esencial, incluida la emergencia, puede reducir el tiempo que se pierde buscando información y la carga de coordinar el cuidado. El análisis del Capítulo 5 mostró además que el proyecto puede sostenerse con las suscripciones de las familias y las instituciones que necesitan más que lo básico, sin cobrarle a quien cuida solo y con un VAN positivo incluso en el escenario pesimista.
+
+\section{Conclusiones}
+
+\subsection{Resumen de los hallazgos clave}
+
+\begin{itemize}
+    \item Se construyó un sistema funcional que reúne la organización del cuidado diario, la coordinación del grupo que cuida, la orientación sobre trámites, recursos y artículos según la discapacidad de cada persona, y la emergencia.
+    \item El motor de recomendación explicó el 100~\% de sus 41 recomendaciones, usó los 20 recursos del catálogo y todas las personas de las familias de demostración recibieron al menos un recurso local y uno de su tipo de discapacidad.
+    \item Los permisos de los grupos funcionaron según lo diseñado. Las 68 pruebas automatizadas resultaron satisfactorias, incluidas las que verifican que un observador no registre, que cada cuidador vea solo a quienes tiene asignados y que nadie vea el grupo de otro dueño.
+    \item El relevamiento analizado de 80 casos, mostró que a más de la mitad le resulta difícil organizar la información del cuidado, que la falta de orientación es el problema más frecuente y que el 80~\% considera útil una herramienta como la propuesta.
+    \item El principal resultado desfavorable fue la calidad del catálogo. Ninguno de los 18 enlaces originales cumplía el criterio de llevar a la página del tema, y todavía hay personas que reciben un solo recurso porque no hay recursos locales de su tipo en su localidad.
+    \item No fue posible medir la utilidad percibida, la satisfacción ni la precisión del recomendador, porque todavía no hay usuarios reales.
+\end{itemize}
+
+\subsection{Respuesta a la pregunta de investigación}
+
+La hipótesis planteaba si es posible centralizar en una sola herramienta la información dispersa que necesita un cuidador de personas con discapacidad, brindándole un punto de apoyo concreto. La respuesta es afirmativa en lo técnico y queda abierta en lo que respecta al apoyo percibido. El sistema demuestra que la información y las tareas pueden reunirse en un solo lugar, repartirse entre varias personas y acompañarse con recomendaciones explicadas. Lo que todavía no puede afirmarse es que los cuidadores lo vivan como un apoyo concreto, porque eso requiere validarlo con ellos.
+
+\subsection{Grado de cumplimiento de los objetivos}
+
+La tabla~\ref{tab:objetivos-cierre} retoma cada objetivo específico del capítulo~\ref{cap:introduccion}, indica en qué medida se alcanzó y remite a la sección que lo demuestra.
+
+\begin{table}[H]
+\centering
+\caption{Objetivos específicos, grado de cumplimiento y evidencia}\label{tab:objetivos-cierre}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.6cm} l}
+\toprule
+\tb{Objetivo específico} & \tb{Grado de cumplimiento} & \tb{Evidencia} \\
+\midrule
+Sistema de recomendación que combine el perfil con las valoraciones de otros cuidadores & Alcanzado; la parte colaborativa sin datos reales & Sección~\ref{sec:eval-motor} \\
+Organización del cuidado en grupos con seguimiento de cada cuidador & Alcanzado & Sección~\ref{sec:seguimiento} \\
+Módulo de emergencia con el SAME y la red de apoyo & Alcanzado & Tabla~\ref{tab:rf} (RF09 y RF10) \\
+Interfaz accesible, también para celulares & Alcanzado en lo técnico, sin validación con usuarios & Sección~\ref{sec:interfaz} \\
+Guía de trámites según el tipo de discapacidad & Alcanzado & Sección~\ref{sec:contenido} \\
+Artículos de especialistas por tipo de discapacidad & Alcanzado & Sección~\ref{sec:fuentes} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Interpretación de los resultados}
+
+Los resultados muestran que el límite del sistema no está en el algoritmo, sino en los datos. El motor ordena bien lo que tiene, pero si el catálogo no tiene recursos en una localidad o para un tipo de discapacidad, no puede sugerir nada específico. Esto confirma la barrera planteada en el Capítulo 1, ya que la información en Argentina está dispersa y alguien tiene que construirla y mantenerla. La revisión de los enlaces lo reafirma, porque incluso los recursos de organismos oficiales necesitaron corrección.
+
+La barrera de credibilidad, en cambio, tuvo una respuesta de diseño concreta. Cada recomendación dice por qué aparece, cada paso de la guía de trámites cita su fuente y cada artículo lleva a su texto original. Si eso alcanza para que los cuidadores confíen en la plataforma es algo que deberá comprobarse con usuarios.
+
+\subsection{Comparación con estudios previos y productos similares}
+
+La evidencia internacional revisada en el Capítulo 3 indica que las soluciones con mayor potencial son las que integran la organización personal, el acceso a información y una orientación adaptada a cada usuario. El sistema construido sigue esa línea, y el relevamiento apunta en la misma dirección, ya que la información del cuidado aparece repartida entre la agenda en papel, el celular y los mensajes. A su vez, la literatura sobre agentes conversacionales advierte sobre la seguridad de las respuestas automáticas, y por eso se optó por recomendar recursos verificados en lugar de generar respuestas en lenguaje natural. La siguiente tabla compara la propuesta con los productos relevados, según lo descripto en ese capítulo.
+
+\begin{table}[H]
+\centering
+\caption{Comparación con productos similares}\label{tab:c8-1}
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\tb{Producto} & \tb{Foco principal} & \tb{Qué no cubre} \\
+\midrule
+CaringBridge & Comunicación entre pacientes, familiares y su red mediante diarios y novedades compartidas. & Orientación personalizada y gestión administrativa del cuidado. \\
+Lotsa Helping Hands & Coordinación de tareas entre colaboradores con calendarios compartidos. & Registro de lo que se hizo con cada persona. \\
+Medisafe & Adherencia a los tratamientos con alertas y seguimiento de medicación. & Las demás dimensiones del cuidado. \\
+Acompañar (este proyecto) & Organización del cuidado diario, grupo con cuidadores y observadores, seguimiento de lo que registra cada uno, trámites del contexto argentino, recomendaciones explicadas por tipo de discapacidad y emergencia. & Notificaciones fuera de la plataforma, profesionales individuales y validación con usuarios. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La diferencia principal no está en una función aislada, ya que cada producto resuelve bien su parte, sino en la integración y en la adaptación al marco local, como el CUD, las obras sociales y los organismos argentinos.
+
+\subsection{Limitaciones del estudio}
+
+Las limitaciones se agrupan por categoría. Los resultados que dependen de ellas deben leerse como preliminares.
+
+\begin{itemize}
+    \item \textbf{De infraestructura.} El sistema todavía no está publicado en la nube: se ejecuta en un entorno local, por lo que no se midió su disponibilidad ni su rendimiento en producción.
+    \item \textbf{Técnicas y de datos.} La evaluación del motor se hizo con trece perfiles ficticios y un catálogo de 20 recursos. La parte colaborativa solo se verificó con pruebas automatizadas, porque no hay valoraciones reales.
+    \item \textbf{De validación.} El relevamiento se analizó sobre un estudio simulado construido a partir de una prueba piloto, y los indicadores de utilidad percibida, satisfacción e intención de uso no se midieron con usuarios reales. El panel del grupo se probó con datos de demostración preparados para mostrar diferencias, y no con una institución real.
+    \item \textbf{De mercado.} El análisis económico se apoya en supuestos de adopción y de costos que no fueron validados con familias ni con instituciones.
+\end{itemize}
+
+\subsection{Implicaciones teóricas y prácticas}
+
+En lo teórico, los resultados sugieren que, en un dominio sensible como el cuidado, la calidad de la recomendación depende más de la calidad y del alcance de los datos que de la sofisticación del algoritmo, y que la explicación de cada sugerencia es una condición para la confianza. En lo práctico, muestran que una herramienta de este tipo puede servir tanto a quien cuida solo como a familias con un cuidador contratado y a instituciones, con un mismo modelo de grupo y distintos permisos.
+
+\section{Aportes de la tesis}
+
+Entre los aportes originales del trabajo se destacan los siguientes.
+
+\begin{itemize}
+    \item Una plataforma integral pensada para el contexto argentino, que reúne en un solo lugar tareas que los productos relevados resuelven por separado.
+    \item Un recomendador híbrido explicable, en el que el porcentaje de coincidencia refleja solo el perfil y las valoraciones de otros cuidadores se limitan a personas con el mismo tipo de discapacidad.
+    \item Un modelo de grupo de cuidado en el que el dueño, ya sea una familia o una institución, suma cuidadores y observadores con su propia cuenta, y puede seguir lo que registra cada uno.
+    \item Una guía de trámites del CUD y derechos asociados según el tipo de discapacidad, en la que cada paso cita la normativa o la página oficial correspondiente.
+    \item Un método de verificación de fuentes, que revisa que cada enlace lleve a la página del tema descripto, y cuyo resultado inicial desfavorable quedó documentado.
+\end{itemize}
+
+Para el campo de estudio, el trabajo deja un sistema funcional y documentado que puede usarse como base para validaciones con usuarios. Hasta el momento no se derivaron publicaciones ni presentaciones en congresos, aunque los resultados sobre recomendación explicable y verificación de fuentes podrían presentarse en jornadas de informática en salud.
+
+\section{Recomendaciones}
+
+\subsection{Para la práctica profesional}
+
+\begin{itemize}
+    \item Validar la plataforma con cuidadores reales antes de cualquier lanzamiento, con las tareas y los indicadores definidos en el Capítulo 2, y repetir la prueba con distintos perfiles de familiaridad tecnológica.
+    \item Establecer una revisión periódica del catálogo de recursos y artículos, con fecha de última verificación visible para cada uno.
+    \item Presentar los indicadores del panel del grupo como orientativos y acordar con cada institución cómo se interpretan, para evitar que un registro tardío se lea como una toma tardía.
+\end{itemize}
+
+\subsection{Para investigadores futuros}
+
+\begin{itemize}
+    \item Medir la precisión del recomendador con valoraciones reales, como la proporción de recursos marcados como útiles entre los primeros cinco recomendados.
+    \item Evaluar el efecto de la plataforma sobre la sobrecarga del cuidador, por ejemplo, aplicando el Índice de Esfuerzo del Cuidador antes y después de un período de uso.
+\end{itemize}
+
+\subsection{Para instituciones y políticas públicas}
+
+\begin{itemize}
+    \item Publicar la información sobre programas, prestaciones y prestadores en formatos abiertos y actualizados, lo que permitiría que herramientas como esta la integren sin depender de una carga manual.
+    \item Para clínicas, residencias y centros de día, incorporar a las familias como observadoras del registro del cuidado, lo que hace más transparente la relación con ellas.
+    \item Definir pautas claras sobre el acceso de cuidadores contratados y empleados a los datos de salud de las personas que atienden, en línea con la Ley de Protección de Datos Personales.
+\end{itemize}
+
+\subsection{Desarrollo tecnológico}
+
+\begin{itemize}
+    \item Seguir ampliando el catálogo de recursos locales para cada tipo de discapacidad, empezando por las localidades donde hoy hay un solo recurso.
+    \item Publicar el sistema en Azure, con la aplicación en Azure App Service y la base de datos en Azure SQL Database, y activar el cifrado en reposo.
+    \item Integrar una pasarela de pagos real para los planes.
+    \item Permitir invitar a un cuidador por correo, para que no tenga que registrarse antes de sumarse a un grupo.
+\end{itemize}
+
+\section{Futuras líneas de investigación}
+
+La primera línea son las nuevas áreas de exploración. El trabajo dejó afuera de forma deliberada los asistentes conversacionales y los foros abiertos por la falta de evidencia sobre su seguridad. Una investigación interdisciplinaria, con profesionales de la salud, podría evaluar un asistente que responda solo a partir de las fuentes verificadas del catálogo, combinando un modelo de lenguaje con recuperación de información, y medir la seguridad de sus respuestas.
+
+La segunda línea son las mejoras metodológicas. Con suficientes valoraciones reales, el motor podría compararse con técnicas de filtrado colaborativo más elaboradas y evaluarse con métricas como la precisión y la exhaustividad. También podría estudiarse cómo mantener el catálogo actualizado de forma semiautomática, por ejemplo, detectando enlaces caídos o páginas que cambiaron.
+
+La tercera línea son las aplicaciones prácticas. La misma base podría adaptarse al cuidado de personas mayores o con enfermedades crónicas, o integrarse con los sistemas de organismos públicos si en el futuro ofrecen interfaces de acceso.
+
+\section{Consideraciones finales}
+
+Este trabajo partió de una situación concreta, la de las personas que cuidan a alguien con discapacidad en Argentina, muchas veces solas, con la información dispersa y sin orientación. El resultado es una plataforma que ordena el día a día, permite repartir el cuidado entre varias personas, guía los trámites con fuentes oficiales y recomienda recursos explicando por qué.
+
