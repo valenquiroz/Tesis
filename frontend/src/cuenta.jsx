@@ -189,7 +189,7 @@ export function ModalEquipo({ persona, alCerrar, alCambiar }) {
                 <small>
                   {plan.grupo
                     ? "Si lo desactivás, quedás en modo observador: ves lo que registran los cuidadores sin poder cambiarlo."
-                    : "El modo observador está desde el plan Equipo."}
+                    : "El modo observador está desde el plan Intermedio."}
                 </small>
               </span>
             </label>
@@ -199,8 +199,8 @@ export function ModalEquipo({ persona, alCerrar, alCambiar }) {
             <div className="aviso-plan">
               <Icono nombre="info" tamano={16} />
               <p>
-                Con el plan Gratis la persona la cuidás vos. Para sumar a un cuidador contratado o a un familiar que mire,
-                pasate al plan Equipo.
+                Con el plan Básico la persona la cuidás vos. Para sumar a un cuidador contratado o a un familiar que mire,
+                pasate al plan Intermedio.
               </p>
               <Boton
                 variante="secundario"

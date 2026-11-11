@@ -302,8 +302,8 @@ export const puedeAdministrar = (persona) => Boolean(persona) && persona.puedeAd
 
 // mismo contenido que Models/Planes.cs
 export const PLANES = {
-  Gratis: { nombre: "Gratis", precio: 0, tramites: false, diario: false, recursos: false, articulos: false, bienestar: false, grupo: false, supervision: false, informe: false },
-  Equipo: { nombre: "Equipo", precio: 5, tramites: true, diario: true, recursos: true, articulos: false, bienestar: true, grupo: true, supervision: false, informe: false },
+  Gratis: { nombre: "Básico", precio: 0, tramites: false, diario: false, recursos: false, articulos: false, bienestar: false, grupo: false, supervision: false, informe: false },
+  Equipo: { nombre: "Intermedio", precio: 5, tramites: true, diario: true, recursos: true, articulos: false, bienestar: true, grupo: true, supervision: false, informe: false },
   Plus: { nombre: "Plus", precio: 15, tramites: true, diario: true, recursos: true, articulos: true, bienestar: true, grupo: true, supervision: true, informe: true },
 };
 

@@ -98,7 +98,7 @@ public class PersonasAsistidasController : ControllerBase
             return BadRequest(new
             {
                 message = maximo == 1
-                    ? $"El plan Gratis incluye una persona. Para sumar otra, pasate al plan {Planes.QueIncluye(l => l.Personas is null or > 1)}."
+                    ? $"El plan Básico incluye una persona. Para sumar otra, pasate al plan {Planes.QueIncluye(l => l.Personas is null or > 1)}."
                     : $"Tu plan incluye hasta {maximo} personas. Para sumar más, pasate al plan {Planes.QueIncluye(l => l.Personas is null)}.",
                 codigo = "plan"
             });

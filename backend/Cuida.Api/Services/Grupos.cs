@@ -53,7 +53,7 @@ public static class Grupos
         var limites = Planes.De(await context.Users.Where(u => u.Id == duenoId).Select(u => u.Plan).FirstOrDefaultAsync());
 
         if (!limites.Grupo)
-            return $"Con el plan Gratis a la persona la cuidás vos. Para sumar cuidadores u observadores, pasate al plan {Planes.QueIncluye(l => l.Grupo)}.";
+            return $"Con el plan Básico a la persona la cuidás vos. Para sumar cuidadores u observadores, pasate al plan {Planes.QueIncluye(l => l.Grupo)}.";
 
         if (limites.Integrantes is int maximo)
         {

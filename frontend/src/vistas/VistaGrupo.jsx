@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { api } from "../api";
 import { Boton, Campo, Cargando, EncabezadoVista, EstadoVacio, Icono, Modal, Tarjeta } from "../componentes";
 import { usePanel } from "../contexto";
-import { colorPersona, formatearHora, haceCuanto, iniciales, planQueIncluye, ROLES_EQUIPO } from "../utilidades";
+import { colorPersona, formatearHora, haceCuanto, iniciales, PLANES, planQueIncluye, ROLES_EQUIPO } from "../utilidades";
 import { AvisoPlan } from "./comunes";
 
 // El grupo del dueño de la cuenta (una familia o una clínica): sus personas, quiénes las
@@ -601,7 +601,7 @@ function DondeAyudas({ grupos, titulo }) {
             <div>
               <h3>{g.nombre}</h3>
               <p className="secundario">
-                {g.nombre === g.dueno ? "" : `Dueño/a del grupo: ${g.dueno} · `}Plan {g.plan}, lo paga {g.dueno}
+                {g.nombre === g.dueno ? "" : `Dueño/a del grupo: ${g.dueno} · `}Plan {PLANES[g.plan]?.nombre ?? g.plan}, lo paga {g.dueno}
               </p>
             </div>
           </div>

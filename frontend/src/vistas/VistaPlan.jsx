@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { api } from "../api";
 import { Boton, Cargando, EncabezadoVista, Icono } from "../componentes";
 import { usePanel } from "../contexto";
-import { formatearTamano } from "../utilidades";
+import { formatearTamano, PLANES } from "../utilidades";
 
 const sinLimite = (valor, texto) => (valor == null ? "Sin límite" : texto(valor));
 
@@ -99,11 +99,11 @@ export default function VistaPlan() {
           <Icono nombre="check" tamano={20} />
           <div>
             <h2>
-              Tenés el plan {g.plan} de {g.nombre}
+              Tenés el plan {PLANES[g.plan]?.nombre ?? g.plan} de {g.nombre}
             </h2>
             <p>
               Lo paga {g.dueno}. Para cuidar {g.personas === 1 ? "a la persona" : `a las ${g.personas} personas`} que te asignó
-              tenés todas las funciones del plan {g.plan} y no pagás nada.
+              tenés todas las funciones del plan {PLANES[g.plan]?.nombre ?? g.plan} y no pagás nada.
             </p>
           </div>
         </section>

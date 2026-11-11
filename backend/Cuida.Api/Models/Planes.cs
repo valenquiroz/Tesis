@@ -19,9 +19,9 @@ public static class Planes
     // null = sin límite
     public static readonly IReadOnlyDictionary<string, LimitesPlan> Limites = new Dictionary<string, LimitesPlan>
     {
-        [Gratis] = new(Gratis, "Gratis", 0, Personas: 1, Integrantes: 0, EspacioDocumentos: 100 * Mb,
+        [Gratis] = new(Gratis, "Básico", 0, Personas: 1, Integrantes: 0, EspacioDocumentos: 100 * Mb,
             Tramites: false, Diario: false, Recursos: false, Articulos: false, Bienestar: false, Supervision: false, Informe: false),
-        [Equipo] = new(Equipo, "Equipo", 5, Personas: 5, Integrantes: 3, EspacioDocumentos: 1024 * Mb,
+        [Equipo] = new(Equipo, "Intermedio", 5, Personas: 5, Integrantes: 3, EspacioDocumentos: 1024 * Mb,
             Tramites: true, Diario: true, Recursos: true, Articulos: false, Bienestar: true, Supervision: false, Informe: false),
         [Plus] = new(Plus, "Plus", 15, Personas: null, Integrantes: null, EspacioDocumentos: 10 * 1024 * Mb,
             Tramites: true, Diario: true, Recursos: true, Articulos: true, Bienestar: true, Supervision: true, Informe: true),
