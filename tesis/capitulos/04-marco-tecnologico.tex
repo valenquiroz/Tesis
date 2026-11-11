@@ -66,7 +66,7 @@ El sistema se organiza en grupos. Quien crea una cuenta es dueño de su grupo, c
     \item Tu bienestar: Una autoevaluación del esfuerzo del cuidador con orientación y líneas de ayuda.
     \item Emergencia: El acceso directo al SAME (107) desde cualquier pantalla, los contactos de la red de apoyo con llamada directa y una ficha de emergencia imprimible por persona.
     \item Tu grupo: Para el dueño, las personas a cargo y quiénes ayudan, con todo lo que registró cada uno, visto por persona o por cuidador, con buscador y filtros. Permite sumar gente y cambiar a quiénes acompaña cada uno. Con el plan Plus muestra además el cumplimiento de cada cuidador. Para quien ayuda en el grupo de otro, muestra ese grupo y a quiénes cuida.
-    \item Planes: La comparación de los planes Básico, Intermedio y Plus y el cambio de plan, con el pago simulado en esta etapa.
+    \item Planes: La comparación de los planes Básico, Intermedio y Plus y el cambio de plan, sin cobro real en esta etapa.
     \item Administración: La carga y edición de los artículos y de los recursos del catálogo.
 \end{itemize}
 
@@ -144,11 +144,11 @@ Las siguientes capturas muestran el prototipo funcional con los datos de demostr
 
 \begin{itemize}
     \item Todavía no está publicada en la nube: Hoy la plataforma se ejecuta en un entorno local, con SQL Server Express y los datos de demostración. El próximo paso es publicarla en Azure, con la aplicación en Azure App Service y la base de datos en Azure SQL Database, para que se pueda usar desde cualquier navegador. Su comportamiento con muchos usuarios simultáneos todavía no se midió.
-    \item El pago está simulado: El cambio de planes inmediato y no se cobra. Para cobrar hace falta integrar una pasarela de pagos.
+    \item Todavía no se cobra: El cambio de plan es inmediato y no se cobra. Para cobrar hace falta integrar una pasarela de pagos.
     \item Faltan datos de uso reales: El componente colaborativo del recomendador está implementado, pero solo se probó con datos de demostración.
 \end{itemize}
 
-Los próximos pasos planificados son (1) validar el uso con cuidadores y con al menos una residencia, y (2) integrar una pasarela de pagos.
+Los próximos pasos planificados son (1) Subir el sistema a la nube, (2) validar el uso con cuidadores y con al menos una residencia, y (3) integrar una pasarela de pagos.
 
 \section{Software}
 
@@ -200,7 +200,7 @@ Para asegurar que los datos se mantengan consistentes y bien relacionados, se ap
 
 \section{Infraestructura y despliegue}
 
-Por ahora el sistema se ejecuta en un entorno local, con SQL Server Express y los datos de demostración, y su publicación queda como próximo paso. Para esa etapa se eligió Microsoft Azure: la aplicación se publicará en Azure App Service y la base de datos en Azure SQL Database. Se eligió Azure por su integración directa con .NET y SQL Server, lo que permite desplegar sin cambiar el motor de base de datos ni el código de acceso a datos, y porque ofrece planes de bajo costo para una escala inicial. Las alternativas evaluadas fueron alojar la API en un servidor virtual propio, que exigía administrar el sistema operativo y las copias de seguridad, o pasar a una base de datos distinta de SQL Server, lo que obligaba a migrar el esquema.
+Por ahora el sistema se ejecuta en un entorno local, con SQL Server Express y los datos de demostración, y su publicación queda como próximo paso. Para esa etapa se eligió Microsoft Azure, la aplicación se publicará en Azure App Service y la base de datos en Azure SQL Database. Se eligió Azure por su integración directa con .NET y SQL Server, lo que permite desplegar sin cambiar el motor de base de datos ni el código de acceso a datos, y porque ofrece planes de bajo costo para una escala inicial. Las alternativas evaluadas fueron alojar la API en un servidor virtual propio, que exigía administrar el sistema operativo y las copias de seguridad, o pasar a una base de datos distinta de SQL Server, lo que obligaba a migrar el esquema.
 
 Una vez publicado, la escalabilidad se resolverá con las opciones del proveedor. El plan de App Service puede aumentar su capacidad o la cantidad de instancias, y la base de datos puede pasar a un nivel de servicio superior sin cambiar la aplicación. Los costos de infraestructura previstos se presentan en el capítulo~\ref{cap:economica}.
 
@@ -218,5 +218,5 @@ La autenticación de usuarios se implementó con ASP.NET Core Identity, el siste
 
 El control de accesos combina los roles de la cuenta (cuidador y administración) con el nivel de acceso de cada usuario sobre cada persona asistida, descripto en la sección de backend. Así, un cuidador contratado solo ve a las personas que tiene asignadas, un observador no puede modificar nada y nadie ve las personas del grupo de otro dueño. Los archivos que se suben se validan por su contenido real y no solo por su extensión.
 
-El cifrado queda previsto para la publicación en Azure: allí los datos se guardarán cifrados en reposo mediante Transparent Data Encryption, que Azure SQL Database aplica de forma nativa, y viajarán cifrados con HTTPS/TLS. En el entorno local actual, que solo usa datos de demostración, no se aplica cifrado en reposo. Queda previsto reforzar la protección a nivel de base de datos mediante Row-Level Security de SQL Server. Dado que la plataforma maneja información sensible sobre la salud de terceros, el tratamiento de los datos se ajustará a lo previsto por la Ley 25.326 de Protección de Datos Personales.
+El cifrado queda previsto para la publicación en Azure, allí los datos se guardarán cifrados en reposo mediante Transparent Data Encryption, que Azure SQL Database aplica de forma nativa, y viajarán cifrados con HTTPS/TLS. En el entorno local actual, que solo usa datos de demostración, no se aplica cifrado en reposo. Queda previsto reforzar la protección a nivel de base de datos mediante Row-Level Security de SQL Server. Dado que la plataforma maneja información sensible sobre la salud de terceros, el tratamiento de los datos se ajustará a lo previsto por la Ley 25.326 de Protección de Datos Personales.
 

@@ -102,7 +102,7 @@ Las conclusiones sirven para reconocer los principales aportes de la propuesta, 
 
 \subsection{Marco de trabajo}
 
-El proyecto se dirigió con un enfoque iterativo e incremental, alineado con los principios de la guía del PMBOK \citep{pmi2021}. Cada entrega de la cátedra funcionó como una iteración con un entregable concreto: un capítulo del documento y, a partir del capítulo 4, un incremento del sistema que se probaba antes de avanzar. Se eligió este enfoque, en lugar de un plan en cascada, porque el alcance se fue ajustando con las devoluciones de la cátedra, por ejemplo al reemplazar la comunidad de cuidadores por la sección de artículos y al rediseñar los grupos y los planes. Al tratarse de una sola persona, no se adoptaron las ceremonias de un marco ágil como Scrum, pero sí sus prácticas centrales: trabajo en incrementos cortos, una lista priorizada de pendientes y revisión al cierre de cada iteración.
+El proyecto se dirigió con un enfoque iterativo e incremental, alineado con los principios de la guía del PMBOK \citep{pmi2021}. Cada entrega de la cátedra funcionó como una iteración con un entregable concreto, un capítulo del documento y, a partir del capítulo 4, un incremento del sistema que se probaba antes de avanzar. Se eligió este enfoque, en lugar de un plan en cascada, porque el alcance se fue ajustando con las devoluciones de la cátedra, por ejemplo, al reemplazar la comunidad de cuidadores por la sección de artículos y al rediseñar los grupos y los planes. Al tratarse de una sola persona, no se adoptaron las ceremonias de un marco ágil como Scrum, pero sí sus prácticas centrales, trabajo en incrementos cortos, una lista priorizada de pendientes y revisión al cierre de cada iteración.
 
 \subsection{Alcance}
 
@@ -112,15 +112,15 @@ No forman parte del alcance las funcionalidades relacionadas con diagnósticos m
 
 \subsection{Tiempos}
 
-El proyecto se desarrolla en distintas etapas que incluyen la investigación de la problemática, el relevamiento de información, el análisis de los datos obtenidos, el diseño y desarrollo de la solución propuesta, su validación y la elaboración de la documentación final. La planificación de estas actividades se representa en el diagrama de Gantt de la figura~\ref{fig:gantt}. Los hitos de las entregas 5 a 8 y del cierre corresponden al cronograma de la cátedra, y el inicio de agosto es aproximado.
+El proyecto se desarrolla en distintas etapas que incluyen la investigación de la problemática, el relevamiento de información, el análisis de los datos obtenidos, el diseño y desarrollo de la solución propuesta, su validación y la elaboración de la documentación final. La planificación de estas actividades se representa en el diagrama de Gantt de la figura~\ref{fig:gantt}. Los hitos de las entregas 5 a 8 y del cierre corresponden al cronograma de la cátedra, y el inicio de mayo es aproximado.
 
-\begin{figure}[H]
+\begin{figure}[tbp]
 \centering
 \footnotesize
 \begin{ganttchart}[
     time slot format=isodate,
     time slot unit=day,
-    x unit=0.115cm,
+    x unit=0.047cm,
     y unit chart=0.48cm,
     y unit title=0.5cm,
     hgrid, vgrid={*6{draw=none},dotted},
@@ -131,9 +131,9 @@ El proyecto se desarrolla en distintas etapas que incluyen la investigación de 
     milestone/.append style={fill=mainColor},
     bar height=0.55,
     milestone height=0.55,
-  ]{2026-08-03}{2026-11-20}
-  \gantttitlecalendar{month=name} \\
-  \ganttbar{Capítulos 1 a 4}{2026-08-03}{2026-09-03} \\
+  ]{2026-05-04}{2026-11-20}
+  \gantttitlecalendar{month=shortname} \\
+  \ganttbar{Capítulos 1 a 4}{2026-05-04}{2026-09-03} \\
   \ganttbar{Desarrollo del sistema}{2026-08-17}{2026-11-03} \\
   \ganttbar{Capítulo 5}{2026-09-04}{2026-09-15} \\
   \ganttmilestone{Entrega 5}{2026-09-15} \\
@@ -186,7 +186,7 @@ La satisfacción de los usuarios se evalúa a partir de la percepción que tenga
 
 Se considera el grado en que la solución logra brindar apoyo en situaciones cotidianas de cuidado, así como la disposición de los usuarios a volver a utilizarla o recomendarla. También se tiene en cuenta la sensación de acompañamiento que la plataforma pueda generar y, en el caso de las familias que contratan a alguien y de las instituciones, la tranquilidad de saber cómo se está cuidando a cada persona.
 
-\section{Declaración de uso de inteligencia artificial}
+\section{Declaración sobre el uso de inteligencia artificial}
 
-Durante el proyecto se utilizó un asistente de inteligencia artificial (Claude, de Anthropic, a través de Claude Code) como apoyo en la programación, la revisión de la redacción, la construcción del estudio simulado, los cálculos económicos y la verificación bibliográfica. Las decisiones de alcance, diseño y conclusiones fueron de la autora. Cada resultado se verificó antes de usarse: el código con las pruebas automatizadas, las cifras y referencias en sus fuentes originales y los textos con una lectura y edición propias. El detalle se presenta en la declaración preliminar y en el apéndice~\ref{apx:registro-ia}.
+Durante el proyecto utilicé Claude, el asistente de inteligencia artificial de Anthropic, a través de Claude Code, como apoyo en el desarrollo del sistema, la estructura del documento, la evaluación económica y algunas búsquedas bibliográficas. Las decisiones de alcance, diseño y funcionamiento del sistema, los criterios de evaluación y las conclusiones fueron definidos por mí. El código y los resultados se revisaron y verificaron antes de incorporarse al trabajo, y las cifras y referencias se contrastaron con sus fuentes originales.
 

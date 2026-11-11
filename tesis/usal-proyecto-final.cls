@@ -33,12 +33,12 @@
 % 1. CONFIGURACIÓN GENERAL Y OPCIONES
 % =============================================================
 
-\LoadClass[11pt, a4paper, twoside, openright]{book}
+\LoadClass[11pt, a4paper, oneside, openany]{book}
 
 % geometría de página (doble faz, encuadernación a la izquierda)
 \RequirePackage[
-  twoside, a4paper,
-  inner=35mm, outer=25mm,
+  twoside=false, a4paper,
+  left=30mm, right=25mm,
   top=27mm, bottom=27mm,
   headsep=5mm, headheight=14pt,
   footskip=11mm,
@@ -139,7 +139,7 @@
 \RequirePackage{makecell}
 
 % apéndices y anexos
-\RequirePackage[toc,page,title,titletoc]{appendix}
+\RequirePackage[toc,title,titletoc]{appendix}% sin hoja de portadilla
 \makeatletter
 \renewcommand{\appendixpagename}{\USAL@appendices}
 \renewcommand{\appendixtocname}{\USAL@appendices}
@@ -153,7 +153,12 @@
 \setlength{\@fptop}{0pt} % flotantes alineados al margen superior
 \makeatother
 
-\setlength{\parindent}{11pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\RequirePackage{etoolbox}
+% las tablas largas no llevan espacio entre párrafos (evita errores al cortar páginas)
+\AtBeginEnvironment{longtable}{\setlength{\parskip}{0pt}}
+\AtBeginEnvironment{xltabular}{\setlength{\parskip}{0pt}}
 
 % leyendas y notas al pie
 \RequirePackage[font=small, labelfont=bf]{caption}
@@ -427,12 +432,13 @@
 % índice de tablas. El glosario, las siglas y los símbolos van al final
 % del documento (\glosarios en main.tex).
 \renewcommand{\frontmatter} {
-    \pagenumbering{roman}
+    \pagenumbering{arabic}
     \pagestyle{fancy}
 
     \maketitle
     \secondcoverpage
     \cleardoublepage
+    \setlength{\parskip}{6pt}
 
     \pagestyle{plain}
     \setlength{\headwidth}{\textwidth}
@@ -505,6 +511,7 @@
 }
 
 \renewcommand{\maketitle} {
+    \setlength{\parskip}{0pt}% la portada no lleva espacio entre párrafos
 
     % geometría propia de la portada
     \newgeometry{
@@ -653,8 +660,6 @@
     \pagestyle{fancy}
     \setDefaultHF
     \renewcommand{\headrulewidth}{1pt}
-    \setcounter{page}{1}
-    \pagenumbering{arabic}
     \setcounter{chapter}{0}
     \setstretch{1.1}
 }

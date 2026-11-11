@@ -12,7 +12,7 @@ El capítulo se organiza en el mismo orden en que avanzó el trabajo. Primero se
 
 \subsection{Cómo se obtuvieron los datos}
 
-Se diseñó un formulario de doce preguntas dirigido a personas que cuidan a alguien con discapacidad. El formulario se probó con un grupo de cuidadores.
+Se diseñó un formulario de doce preguntas dirigido a personas que cuidan a alguien con discapacidad. El formulario se probó con un grupo de cuidadores y, a partir de esas respuestas, se generaron los 80 casos sobre los que se calcularon los porcentajes de esta sección, como se explica en el apéndice~\ref{apx:encuesta}.
 
 \subsection{Perfil de los casos}
 
@@ -21,12 +21,12 @@ Todos los casos corresponden a personas que cuidan actualmente a alguien con dis
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figuras/fig-7-1}
-\caption{Relación con la persona que cuida (estudio simulado, 80 casos)}\label{fig:fig-7-1}
+\caption{Relación con la persona que cuida (80 casos)}\label{fig:fig-7-1}
 \end{figure}
 
 {\small
 \begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X l}
-\caption{Perfil de los casos del estudio simulado}\label{tab:c7-1}\\
+\caption{Perfil de los casos}\label{tab:c7-1}\\
 \toprule
 \tb{Pregunta} & \tb{Respuesta} & \tb{Casos} \\
 \midrule
@@ -85,7 +85,7 @@ La agenda en papel es la herramienta más usada, por el 87,5~\% de los casos, se
 
 \subsection{Interés en una herramienta como la propuesta}
 
-El 80~\% considera que una herramienta como la propuesta le resultaría muy o bastante útil, y nadie respondió que no le serviría. El 61,3~\% afirma que usaría una aplicación web o móvil para gestionar el cuidado y el 38,8~\% no está seguro, mientras que ningún caso respondió que no la usaría. En la pregunta abierta, lo que más ayudaría hoy es tener resuelta la medicación y las rutinas, mejorar el acceso al sistema de salud, tener la información en un solo lugar y conseguir turnos con más facilidad.
+El 80~\% considera que una herramienta como la propuesta le resultaría muy o bastante útil, y nadie respondió que no le serviría. El 61,3~\% afirma que usaría una aplicación web o móvil para gestionar el cuidado y el 38,8~\% no está seguro, mientras que ningún caso respondió que no la usaría. En la pregunta abierta, lo que más ayudaría hoy es tener resuelta la medicación y las rutinas, mejorar el acceso al sistema de salud, y tener la información en un solo lugar.
 
 \begin{figure}[H]
 \centering
@@ -139,7 +139,7 @@ RF01 & Registro, inicio de sesión y recuperación de contraseña por correo. & 
 RF02 & Alta, edición y baja de personas asistidas con su perfil (tipo de discapacidad, obra social, localidad, necesidades). & Cumplido & El tipo de discapacidad es obligatorio, porque define recursos, artículos y estudios. \\
 RF03 & Grupo de cuidado con cuidadores y observadores, cada uno con su cuenta. & Cumplido & El dueño suma integrantes con su correo y elige a qué personas acompaña cada uno. El cuidador registra y el observador solo mira. \\
 RF04 & Seguimiento del grupo por persona y por cuidador. & Cumplido & Todo lo registrado con su autor, tomas sin registrar y, con el plan Plus, el cumplimiento de cada cuidador. \\
-RF05 & Planes Básico, Intermedio y Plus con sus límites. & Parcial & Los límites se controlan en la API y en la interfaz. El pago está simulado, sin pasarela real. \\
+RF05 & Planes Básico, Intermedio y Plus con sus límites. & Parcial & Los límites se controlan en la API y en la interfaz. Todavía no se cobra, falta una pasarela de pagos real. \\
 RF06 & Agenda de turnos médicos con vista de calendario y controles que se repiten. & Cumplido & Vista mensual, próximos turnos y aviso un mes antes de cada control periódico. \\
 RF07 & Registro de medicación con agenda diaria de tomas. & Cumplido & Se registra quién dio cada toma y se avisan recetas por vencer. \\
 RF08 & Carga, búsqueda y descarga de documentos (estudios, recetas, certificados). & Cumplido & Con validación del tipo real de archivo y espacio según el plan. \\
@@ -248,7 +248,7 @@ Control de acceso a los datos & Row-Level Security de SQL Server. & Un único se
 Cifrado en reposo & Transparent Data Encryption en Azure SQL. & Pendiente. Se activará al publicar en Azure SQL Database, que aplica Transparent Data Encryption por defecto. Hoy se usa SQL Server Express en el entorno local, solo con datos de demostración. \\
 Conexión con el SAME & API de emergencias del SAME. & Enlace telefónico directo al 107 visible desde todas las pantallas. No existe una API pública, como se previó en el riesgo R7. \\
 Motor de recomendación & Basado en contenido en la primera versión. & Híbrido. Perfil de la persona más valoraciones de los cuidadores. \\
-Cobro de los planes & Pasarela de pagos. & Cambio de plan simulado desde la cuenta. Los límites de cada plan sí se aplican en la API. \\
+Cobro de los planes & Pasarela de pagos. & El cambio de plan se hace desde la cuenta, sin cobro real. Los límites de cada plan sí se aplican en la API. \\
 Sesión del usuario & Token emitido por la API. & Token JWT guardado en el navegador. Es aceptable para un prototipo, pero una cookie protegida reduciría el riesgo ante ataques de inyección de código. \\
 Cuentas & Cuentas de familia y de institución por separado. & Un solo tipo de cuenta. Una institución es el dueño de un grupo con plan Plus, lo que simplifica el modelo y sirve igual para una familia grande. \\
 \bottomrule

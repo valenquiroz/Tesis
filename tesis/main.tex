@@ -28,8 +28,8 @@
 \director{Germán Buchniv}{Director de las carreras Lic. en Sistemas de Información e Ingeniería en Informática}
 \profesor{Esteban Tissera}{Profesor, Facultad de Ingeniería}
 
-\palabrasclave{cuidado de personas con discapacidad, sistema de recomendación híbrido, recomendación explicable, plataforma web, cuidadores}
-\keywords{disability care, hybrid recommender system, explainable recommendation, web platform, caregivers}
+\palabrasclave{cuidado de personas con discapacidad, sistema de recomendación híbrido, recomendación explicable, plataforma web, cuidadores.}
+\keywords{disability care, hybrid recommender system, explainable recommendation, web platform, caregivers.}
 
 % segunda página: declaración de originalidad y repositorio
 \secondpage{\input{preliminares/segunda-pagina}}
@@ -64,6 +64,15 @@
 }
 
 
+% glosario y siglas: nombre y descripción con mayúscula inicial en las listas
+\newglossarystyle{longmayus}{%
+  \setglossarystyle{long}%
+  \renewcommand*{\glossentry}[2]{%
+    \glsentryitem{##1}\glstarget{##1}{\Glossentryname{##1}} &
+    \Glossentrydesc{##1}\glspostdescription\space ##2\tabularnewline}%
+}
+\setglossarystyle{longmayus}
+
 % =============================================================
 \begin{document}
 
@@ -86,7 +95,6 @@
     \begin{appendices}
         \input{apendices/A-encuesta-validacion}
         \input{apendices/B-detalles-tecnicos}
-        \input{apendices/C-registro-ia}
     \end{appendices}
 
     % anexos: material externo
