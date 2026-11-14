@@ -6,7 +6,7 @@
 
 En este capítulo se aborda el análisis económico y financiero del ``Sistema inteligente de recomendación para la gestión del cuidado de personas con discapacidad en Argentina''. El propósito central es detallar los recursos monetarios que exige la propuesta, definir las estrategias necesarias para garantizar su sostenibilidad una vez concluida la fase universitaria y determinar las condiciones bajo las cuales el proyecto resulta económicamente viable.
 
-Para lograr una estimación certera, la evaluación distingue claramente entre el desarrollo del prototipo académico y su eventual implementación en un entorno de producción real. Durante la etapa del prototipo, no se asigna un valor monetario a las horas de trabajo dedicadas a la investigación, el diseño de software, la programación ni al trabajo de campo. Al tratarse de actividades enmarcadas en el ámbito académico, representan un esfuerzo técnico e intelectual que no implica un desembolso directo para el proyecto. En consecuencia, la inversión considerada en esta fase inicial se limita exclusivamente a los gastos monetarios imprescindibles para contratar los servicios digitales y la infraestructura tecnológica que hacen posible el funcionamiento del sistema.
+La evaluación considera como inversión inicial tanto el gasto monetario necesario para poner en marcha la plataforma como el valor de las horas de trabajo dedicadas a su desarrollo, valorizadas por rol, tal como lo indica la cátedra. Del mismo modo, los costos de operación incluyen, además de los servicios tecnológicos, las horas necesarias para mantener el sistema y actualizar el catálogo de recursos. De esta forma, los indicadores reflejan el costo económico completo del proyecto y no solo sus desembolsos de dinero.
 
 \section{Metodología y alcance}
 
@@ -18,7 +18,7 @@ La decisión de estructurar la evaluación en dólares responde a que los princi
 
 \subsection{Tamaño del mercado}
 
-Según el INDEC, el 10,2~\% de la población de 6 años y más que vive en localidades urbanas tiene alguna discapacidad \citep{indec2018}. El Registro Nacional de Personas con Discapacidad contabilizaba, a noviembre de 2023, 1.680.723 personas con el Certificado Único de Discapacidad vigente \citep{andis2023}. Esta cifra se toma como una cota inferior del mercado potencial, porque cada persona certificada suele tener al menos una persona que la cuida, y porque no incluye a quienes no tramitaron el certificado.
+Según el INDEC, el 10,2~\% de la población de 6 años y más que vive en localidades urbanas tiene alguna discapacidad \citep{indec2018}. El Registro Nacional de Personas con Discapacidad contabilizaba, a noviembre de 2023, 1.680.723 personas con el Certificado Único de Discapacidad vigente \citep{andis2023}. Esta cifra se toma como una cota inferior del mercado potencial, ya que una persona certificada puede requerir al menos una persona que la cuide, y porque no incluye a quienes no tramitaron el certificado.
 
 El mercado se divide en tres segmentos. El primero son las personas que cuidan solas a un familiar, que usan el plan gratuito. El segundo son las familias que reparten el cuidado entre varias personas o contrataron a un cuidador, a las que se dirige el plan Intermedio. El tercero son las clínicas, residencias y centros de día, que necesitan supervisar el trabajo de varios empleados y contratan el plan Plus. El modelo de negocio es, por lo tanto, B2C para las familias y B2B para las instituciones, con una base gratuita.
 
@@ -48,7 +48,7 @@ El precio del plan Intermedio se ubica en el mismo nivel que la suscripción de 
 
 La plataforma adopta un modelo de suscripción con una base gratuita y dos planes pagos. Lo básico del día a día, la línea del día, la medicación, el calendario, los documentos y la emergencia, es gratis siempre, y la emergencia nunca se cobra. Los planes pagos suman la guía de trámites, el diario, los recursos recomendados y la posibilidad de sumar cuidadores y observadores al grupo, cada uno con su propia cuenta.
 
-Quien paga es el dueño del grupo, ya sea una familia o una institución. Las clínicas, residencias y centros de día contratan el plan Plus, que no tiene límite de pacientes ni de empleados e incluye el panel para supervisar lo que registra cada uno. Los cuidadores que forman parte de un grupo no pagan nada, porque los cubre el plan de su dueño.
+Quien paga es el dueño del grupo, ya sea una familia o una institución. Las clínicas, residencias y centros de día contratan el plan Plus, que en esta versión no tiene límite de pacientes ni de empleados e incluye el panel para supervisar lo que registra cada uno. Los cuidadores que forman parte de un grupo no abonan una suscripción, porque los cubre el plan de su dueño.
 
 \begin{table}[H]
 \centering
@@ -84,33 +84,31 @@ Para la proyección se contempla una adopción gradual de suscripciones pagas. L
 \end{tabularx}
 \end{table}
 
-Quien cuida a una persona por su cuenta puede usar la plataforma sin pagar. Pagan quienes necesitan más, las familias que reparten el cuidado o contrataron a alguien y las instituciones, que obtienen un valor operativo directo al poder supervisar el cuidado que brindan sus empleados. Hacia el quinto año, el plan Plus representa el 58~\% de los ingresos.
+Quien cuida a una persona por su cuenta puede usar la plataforma sin pagar. Pagan quienes necesitan más funciones, las familias que reparten el cuidado o contrataron a un cuidador y las instituciones, que obtienen un valor operativo directo al poder supervisar el cuidado que brindan sus empleados. Hacia el quinto año, el plan Plus representa el 58~\% de los ingresos.
+
+El precio del plan Plus se fijó como un precio de entrada para residencias y centros de día de pequeña escala, que constituyen el segmento considerado en la proyección. Para una institución con decenas de residentes, ese valor resulta bajo en relación con el beneficio que obtiene. Por ese motivo, para una etapa comercial se prevé que, a partir de las veinte personas a cargo, el precio del plan se calcule por persona. Como la proyección de ingresos solo considera instituciones pequeñas, este ajuste no modifica los resultados del análisis.
 
 \section{Inversión inicial}
 
-La inversión inicial contemplada para el proyecto se enfoca de manera exclusiva en los gastos monetarios estrictamente necesarios para poner en funcionamiento la infraestructura digital que requiere el sistema. Para mantener una estimación transparente del prototipo, dentro de este cálculo no se incluyen sueldos ni el costo de oportunidad del tiempo que se dedicó al proyecto. De la misma manera, se dejan fuera la compra de equipos informáticos y todo el trabajo de campo.
-
-El monto total de esta inversión resulta sumamente accesible debido a que el desarrollo se llevó a cabo en un marco académico, un contexto que permitió aprovechar herramientas de uso gratuito, licencias educativas y servicios tecnológicos de muy bajo costo. En caso de querer dar el salto hacia una implementación comercial, van a surgir otros gastos operativos, logísticos y de infraestructura que superan el alcance de esta primera etapa universitaria.
+La inversión inicial del proyecto se compone de dos partes. La primera es el gasto monetario necesario para poner en funcionamiento la infraestructura digital del sistema, que se presenta en la tabla~\ref{tab:c5-3}. La segunda es el valor de las horas de trabajo dedicadas al desarrollo, que no implicaron un desembolso de dinero pero representan el costo económico real del proyecto. No se incluyen la compra de equipos informáticos ni el trabajo de campo.
 
 \begin{table}[H]
 \centering
-\caption{Inversión inicial}\label{tab:c5-3}
+\caption{Gasto monetario de puesta en marcha}\label{tab:c5-3}
 \small
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r}
 \toprule
 \tb{Concepto} & \tb{Importe estimado} \\
 \midrule
 Dominio y configuración inicial & USD 25 \\
 Configuración inicial de servicios cloud & USD 50 \\
 Servicios digitales complementarios & USD 25 \\
-\textbf{Total inversión inicial} & \textbf{USD 100} \\
+\textbf{Total} & \textbf{USD 100} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Inversión valorizada por rol y tiempo}
-
-Aunque las horas de trabajo no implicaron un desembolso, la cátedra pide valorizar la inversión por rol y tiempo. Para hacerlo se estimaron las horas dedicadas a cada actividad y se les asignó el rol que las realizaría en un equipo. Como todo el trabajo lo hizo una sola persona con perfil junior, se usa una tarifa única de referencia de USD 7 por hora, que corresponde a un perfil junior en modalidad remota en Argentina y es una estimación propia. Un equipo con perfiles de mayor experiencia tendría un costo más alto.
+Para valorizar las horas de trabajo se estimaron las horas dedicadas a cada actividad y se les asignó el rol que las realizaría en un equipo. Como todo el trabajo lo realizó una sola persona con perfil junior, se usa una tarifa única de referencia de USD 7 por hora, que corresponde a un perfil junior en modalidad remota en Argentina y es una estimación propia. Un equipo con perfiles de mayor experiencia tendría un costo más alto.
 
 \begin{table}[H]
 \centering
@@ -127,25 +125,25 @@ Desarrolladora frontend & Interfaz en React & 150 & USD 1.050 \\
 QA y despliegue & Pruebas, despliegue y documentación & 80 & USD 560 \\
 \midrule
 \textbf{Subtotal de horas} & & \textbf{790} & \textbf{USD 5.530} \\
-Infraestructura inicial & Tabla~\ref{tab:c5-3} & & USD 100 \\
-\textbf{Inversión total valorizada} & & & \textbf{USD 5.630} \\
+Gasto de puesta en marcha & Tabla~\ref{tab:c5-3} & & USD 100 \\
+\textbf{Inversión inicial total} & & & \textbf{USD 5.630} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-El flujo de fondos de las secciones siguientes considera solo la inversión monetaria de USD 100, porque es el único gasto de dinero que requiere la puesta en marcha, es decir, la publicación del sistema en Azure, prevista como próximo paso. Para medir el efecto de valorizar las horas, en el análisis de escenarios se recalculan los indicadores con la inversión total de USD 5.630.
+La inversión inicial total de USD 5.630 se utiliza como caso base en todo el análisis. Considerar solo el gasto monetario de USD 100 produciría indicadores que no reflejan el esfuerzo económico del proyecto, como una tasa interna de retorno de varios miles por ciento y un repago de pocas semanas.
 
 \section{Costos de operación y escalabilidad}
 
-Una vez que el proyecto se publique y se ponga en marcha, los costos operativos se enfocan principalmente en la infraestructura en la nube, el mantenimiento del dominio junto con sus servicios auxiliares, el consumo de servicios externos y las comisiones de la pasarela de pagos. Para estas últimas se reserva un 7~\% de lo cobrado, como supuesto de trabajo.
+Una vez que el sistema se publique y se ponga en marcha, los costos operativos se componen de la infraestructura en la nube, el mantenimiento del dominio y sus servicios auxiliares, el consumo de servicios externos, las comisiones de la pasarela de pagos y las horas de trabajo necesarias para mantener la plataforma. Para las comisiones se reserva un 7~\% de lo cobrado, como supuesto de trabajo. Para el mantenimiento, el soporte a los usuarios y la actualización del catálogo de recursos y artículos se estiman 10 horas mensuales, valorizadas con la misma tarifa de USD 7 por hora que la inversión, lo que da USD 840 por año.
 
-Las cifras consideradas son reservas presupuestarias pensadas para un escenario de pequeña escala, y de ninguna manera representan presupuestos cerrados o contratos firmados. De cara a una etapa de producción real, va a ser indispensable revisar los planes vigentes de cada proveedor, contemplando sus límites de uso, las comisiones, los impuestos aplicables y el consumo efectivo que demande la plataforma.
+Las cifras consideradas son reservas presupuestarias pensadas para un escenario de pequeña escala, y no representan presupuestos cerrados ni contratos firmados. De cara a una etapa de producción real, será necesario revisar los planes vigentes de cada proveedor, sus límites de uso, las comisiones, los impuestos aplicables y el consumo efectivo de la plataforma.
 
 \begin{table}[H]
 \centering
-\caption{Costos de operación proyectados}\label{tab:c5-5}
+\caption{Costos de operación proyectados (escenario base)}\label{tab:c5-5}
 \footnotesize
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l l l l l}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r r}
 \toprule
 \tb{Concepto} & \tb{Año 1} & \tb{Año 2} & \tb{Año 3} & \tb{Año 4} & \tb{Año 5} \\
 \midrule
@@ -153,14 +151,15 @@ Infraestructura cloud & USD 180 & USD 240 & USD 360 & USD 480 & USD 720 \\
 Dominio, correo y auxiliares & USD 60 & USD 60 & USD 75 & USD 90 & USD 120 \\
 Servicios externos y APIs & USD 60 & USD 90 & USD 150 & USD 240 & USD 360 \\
 Comisiones de cobro (7~\%) & USD 139 & USD 336 & USD 626 & USD 987 & USD 1.407 \\
-\textbf{Total costos} & \textbf{USD 439} & \textbf{USD 726} & \textbf{USD 1.211} & \textbf{USD 1.797} & \textbf{USD 2.607} \\
+Mantenimiento, soporte y catálogo & USD 840 & USD 840 & USD 840 & USD 840 & USD 840 \\
+\textbf{Total costos} & \textbf{USD 1.279} & \textbf{USD 1.566} & \textbf{USD 2.051} & \textbf{USD 2.637} & \textbf{USD 3.447} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Beneficios esperados}
 
-Los beneficios económicos directos del proyecto provienen de las suscripciones. A la par de estos retornos, el sistema genera importantes beneficios de carácter social y operativo, aunque estos no se monetizan en la evaluación económica dada la falta de información objetiva para asignarles un valor financiero preciso. Esta decisión de dejar fuera del VAN los beneficios intangibles responde a un criterio de prudencia metodológica.
+Los beneficios económicos directos del proyecto provienen de las suscripciones. A la par de estos retornos, el sistema genera beneficios de carácter social y operativo, aunque estos no se monetizan en la evaluación económica dada la falta de información objetiva para asignarles un valor financiero preciso. Esta decisión de dejar fuera del VAN los beneficios intangibles responde a un criterio de prudencia metodológica.
 
 \begin{table}[H]
 \centering
@@ -182,85 +181,108 @@ Intangible & Mayor acceso a recursos y trámites & Uso de recursos recomendados 
 
 \section{Flujo de fondos proyectado}
 
-El flujo de fondos refleja las entradas y salidas de dinero que se estiman para todo el horizonte del análisis. El año cero concentra la inversión inicial imprescindible para poner en marcha la plataforma, mientras que los períodos posteriores muestran la evolución de los ingresos, los costos operativos y el flujo neto de caja al cierre de cada ejercicio.
-
-El saldo neto anual es positivo desde el primer año de funcionamiento. Esto se explica por la baja inversión inicial, por los costos operativos acotados y por el supuesto de concretar veintiuna suscripciones pagas durante los primeros doce meses.
+El flujo de fondos refleja las entradas y salidas de dinero que se estiman para todo el horizonte del análisis. El año cero concentra la inversión inicial valorizada, mientras que los períodos posteriores muestran la evolución de los ingresos, los costos operativos y el flujo neto al cierre de cada ejercicio. En el escenario base, el flujo neto es positivo desde el primer año, aunque en ese año resulta reducido porque los ingresos de veintiuna suscripciones pagas apenas superan los costos de operación.
 
 \begin{table}[H]
 \centering
 \caption{Flujo de fondos proyectado (escenario base)}\label{tab:c5-7}
 \footnotesize
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l l l l l l}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r r r}
 \toprule
 \tb{Concepto} & \tb{Año 0} & \tb{Año 1} & \tb{Año 2} & \tb{Año 3} & \tb{Año 4} & \tb{Año 5} \\
 \midrule
 Ingresos & USD 0 & USD 1.980 & USD 4.800 & USD 8.940 & USD 14.100 & USD 20.100 \\
-Costos operativos & USD 0 & USD 439 & USD 726 & USD 1.211 & USD 1.797 & USD 2.607 \\
-Inversión inicial & -USD 100 & USD 0 & USD 0 & USD 0 & USD 0 & USD 0 \\
-Flujo neto & -USD 100 & USD 1.541 & USD 4.074 & USD 7.729 & USD 12.303 & USD 17.493 \\
+Costos operativos & USD 0 & $-$USD 1.279 & $-$USD 1.566 & $-$USD 2.051 & $-$USD 2.637 & $-$USD 3.447 \\
+Inversión inicial & $-$USD 5.630 & USD 0 & USD 0 & USD 0 & USD 0 & USD 0 \\
+\textbf{Flujo neto} & \textbf{$-$USD 5.630} & \textbf{USD 701} & \textbf{USD 3.234} & \textbf{USD 6.889} & \textbf{USD 11.463} & \textbf{USD 16.653} \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Flujo de fondos descontado}
 
-Para calcular el Valor Actual Neto (VAN) y el período de repago descontado, cada flujo proyectado se actualiza a valor presente aplicando una tasa de descuento del 20~\% anual, mediante el factor 1/(1+0,20)\textasciicircum{}t, donde t representa el año correspondiente.
+Para calcular el Valor Actual Neto (VAN) y el período de repago descontado, cada flujo proyectado se actualiza a valor presente aplicando una tasa de descuento del 20~\% anual mediante el factor de actualización
+
+\[
+FA_t = \frac{1}{(1+r)^t} = \frac{1}{(1+0{,}20)^t}
+\]
+
+donde $r$ es la tasa de descuento y $t$ representa el año correspondiente.
 
 \begin{table}[H]
 \centering
-\caption{Flujo de fondos descontado}\label{tab:c5-8}
+\caption{Flujo de fondos descontado (escenario base)}\label{tab:c5-8}
 \small
-\begin{tabularx}{\textwidth}{l l >{\raggedright\arraybackslash}X l >{\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{l r >{\raggedleft\arraybackslash}X r >{\raggedleft\arraybackslash}X}
 \toprule
-\tb{Año} & \tb{Flujo neto} & \tb{Factor de descuento} & \tb{Flujo descontado} & \tb{Acumulado descontado} \\
+\tb{Año} & \tb{Flujo neto} & \tb{Factor de actualización} & \tb{Flujo descontado} & \tb{Acumulado descontado} \\
 \midrule
-0 & -100 & 1,000 & -100 & -100 \\
-1 & 1.541 & 0,833 & 1.284 & 1.184 \\
-2 & 4.074 & 0,694 & 2.829 & 4.013 \\
-3 & 7.729 & 0,579 & 4.473 & 8.486 \\
-4 & 12.303 & 0,482 & 5.933 & 14.419 \\
-5 & 17.493 & 0,402 & 7.030 & 21.449 \\
+0 & $-$USD 5.630 & 1,000 & $-$USD 5.630 & $-$USD 5.630 \\
+1 & USD 701 & 0,833 & USD 584 & $-$USD 5.046 \\
+2 & USD 3.234 & 0,694 & USD 2.246 & $-$USD 2.800 \\
+3 & USD 6.889 & 0,579 & USD 3.987 & USD 1.187 \\
+4 & USD 11.463 & 0,482 & USD 5.528 & USD 6.715 \\
+5 & USD 16.653 & 0,402 & USD 6.692 & USD 13.407 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Flujo de caja acumulado y período de repago}
 
-El flujo de caja acumulado permite identificar el momento en que se recupera la inversión inicial. Se calcula sumando los saldos netos de cada período para observar cómo se va absorbiendo la erogación inicial.
+El flujo de caja acumulado permite identificar el momento en que se recupera la inversión inicial. Se calcula sumando los saldos netos de cada período.
 
-En este proyecto, la inversión se recupera durante el primer año de operación. Dado que se parte de un saldo a recuperar de USD 100 y que el flujo neto del primer año asciende a USD 1.541, la proporción necesaria para cubrir ese desembolso es de 100/1.541, es decir 0,065. Esto significa que el período de repago simple es de aproximadamente 0,07 años, menos de un mes desde la puesta en marcha de la plataforma.
+En el escenario base, al cierre del segundo año el saldo acumulado todavía es negativo, de USD 1.695, y el flujo del tercer año es de USD 6.889. La fracción del tercer año necesaria para cubrir ese saldo es de 1.695/6.889, es decir 0,25. Por lo tanto, el período de repago simple es de aproximadamente 2,25 años.
 
 \begin{table}[H]
 \centering
-\caption{Flujo de caja acumulado}\label{tab:c5-9}
+\caption{Flujo de caja acumulado (escenario base)}\label{tab:c5-9}
 \small
-\begin{tabularx}{\textwidth}{l l l}
+\begin{tabularx}{\textwidth}{X r r}
 \toprule
 \tb{Año} & \tb{Flujo neto} & \tb{Flujo acumulado} \\
 \midrule
-0 & -USD 100 & -USD 100 \\
-1 & USD 1.541 & USD 1.441 \\
-2 & USD 4.074 & USD 5.515 \\
-3 & USD 7.729 & USD 13.244 \\
-4 & USD 12.303 & USD 25.547 \\
-5 & USD 17.493 & USD 43.040 \\
+0 & $-$USD 5.630 & $-$USD 5.630 \\
+1 & USD 701 & $-$USD 4.929 \\
+2 & USD 3.234 & $-$USD 1.695 \\
+3 & USD 6.889 & USD 5.194 \\
+4 & USD 11.463 & USD 16.657 \\
+5 & USD 16.653 & USD 33.310 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figuras/fig-5-1}
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.92\textwidth, height=6.2cm,
+    xlabel={Año}, ylabel={Flujo acumulado (USD)},
+    xtick={0,1,2,3,4,5},
+    ytick={-10000,0,10000,20000,30000},
+    ymin=-10000, ymax=36000,
+    ymajorgrids, grid style={dotted,gray!50},
+    legend pos=north west, legend cell align=left,
+    tick label style={font=\footnotesize}, label style={font=\footnotesize}, legend style={font=\footnotesize},
+    scaled y ticks=false,
+    yticklabel={\pgfmathprintnumber[1000 sep={.}]{\tick}},
+  ]
+  \addplot[thick, mark=*, color=mainColor] coordinates {(0,-5630) (1,-4929) (2,-1695) (3,5194) (4,16657) (5,33310)};
+  \addlegendentry{Escenario base}
+  \addplot[thick, mark=square*, color=gray, dashed] coordinates {(0,-5630) (1,-5877) (2,-4987) (3,-2283) (4,2540) (5,9763)};
+  \addlegendentry{Escenario pesimista}
+  \addplot[black, thin, forget plot] coordinates {(0,0) (5,0)};
+\end{axis}
+\end{tikzpicture}
 \caption{Evolución estimada del flujo de caja acumulado en el escenario base y en el pesimista}\label{fig:fig-5-1}
 \end{figure}
 
 \section{Período de repago descontado}
 
-El período de repago descontado incorpora la tasa del 20~\% para evaluar en qué momento se recupera la inversión medida en valor presente. El flujo descontado del primer año se ubica en USD 1.284, suficiente para absorber el desembolso inicial de USD 100 dentro de esos mismos doce meses. La fracción requerida (100/1.284) es de 0,08 años, alrededor de 0,9 meses de operación.
+El período de repago descontado incorpora la tasa del 20~\% para evaluar en qué momento se recupera la inversión medida en valor presente. Al cierre del segundo año, el acumulado descontado es de $-$USD 2.800, y el flujo descontado del tercer año es de USD 3.987. La fracción requerida es de 2.800/3.987, es decir 0,70, por lo que el período de repago descontado es de aproximadamente 2,70 años.
 
 \section{Tasa de descuento}
 
-La tasa de descuento se construyó con el modelo de valoración de activos de capital ajustado por riesgo país, sumando una prima por la etapa temprana del proyecto:
+La tasa de descuento se construyó con el modelo de valoración de activos de capital ajustado por riesgo país, sumando una prima por la etapa temprana del proyecto.
 
 \[
 r = r_f + \beta \cdot \mathit{PRM} + \mathit{RP} + \text{prima por etapa temprana}
@@ -290,19 +312,25 @@ El proyecto no tiene deuda, por lo que la tasa coincide con el costo del capital
 
 \section{Valor Actual Neto (VAN)}
 
-Al descontar los flujos futuros con la tasa de corte del 20~\% anual y restar la inversión inicial, el VAN alcanza un resultado aproximado de USD 21.449. Al arrojar un indicador claramente superior a cero, la propuesta resulta económicamente aceptable bajo los supuestos del escenario base.
+El VAN se obtiene sumando los flujos descontados de los cinco años y restando la inversión inicial.
+
+\[
+\mathit{VAN} = \sum_{t=0}^{5} \frac{F_t}{(1+r)^t} \approx \text{USD } 13.407
+\]
+
+donde $F_t$ es el flujo neto del año $t$. Un VAN positivo significa que, después de recuperar la inversión de USD 5.630 y de obtener el rendimiento mínimo exigido del 20~\% anual, el proyecto genera un excedente de alrededor de USD 13.400 medido en valores actuales. Bajo los supuestos del escenario base, la propuesta resulta económicamente aceptable.
 
 \section{Tasa Interna de Retorno (TIR)}
 
-La Tasa Interna de Retorno (TIR) es el porcentaje de descuento que iguala el VAN a cero. Sobre el flujo proyectado, el cálculo arroja una TIR cercana al 1.694~\% anual. Este valor tan elevado no responde a un margen de ganancias desmedido, sino a que la inversión inicial considerada es muy baja en comparación con los flujos netos que se generan desde el primer año.
+La Tasa Interna de Retorno (TIR) es la tasa de descuento que iguala el VAN a cero. Sobre el flujo del escenario base, el cálculo arroja una TIR cercana al 68,6~\% anual, superior a la tasa de corte del 20~\%. Este valor elevado se explica porque se trata de un servicio digital con costos marginales bajos, en el que una inversión inicial moderada genera flujos crecientes a medida que se suman suscripciones.
 
-Por esta razón, la TIR debe interpretarse con cautela y no tomarse de forma aislada. Si bien supera ampliamente la tasa de corte del 20~\%, depende de forma directa de que se cumplan las hipótesis de adopción de los planes pagos.
+Por esta razón, la TIR debe interpretarse con cautela y no tomarse de forma aislada, ya que depende de forma directa de que se cumplan las hipótesis de adopción de los planes pagos, que todavía no fueron validadas.
 
 \section{Punto de equilibrio}
 
-Durante el primer año, los costos operativos fijos (sin contar las comisiones) alcanzan USD 300. Cada suscripción al plan Intermedio aporta, descontada la comisión, unos USD 55,80 al año, y cada suscripción Plus unos USD 167,40. Por lo tanto, el punto de equilibrio operativo se alcanza con seis suscripciones Intermedio, con dos suscripciones Plus o con una combinación de ambas, por ejemplo, una institución y tres familias.
+Durante el primer año, los costos operativos fijos (sin contar las comisiones) alcanzan USD~1.140, que incluyen USD 300 de servicios tecnológicos y USD 840 de mantenimiento. Cada suscripción al plan Intermedio aporta, descontada la comisión, unos USD 55,80 al año, y cada suscripción Plus unos USD 167,40. Por lo tanto, el punto de equilibrio operativo se alcanza con 21 suscripciones Intermedio, con 7 suscripciones Plus o con una combinación de ambas, por ejemplo, 5 instituciones y 6 familias. El escenario base proyecta para el primer año 15 suscripciones Intermedio y 6 Plus, por lo que supera ese nivel.
 
-Este cálculo se enfoca en la sostenibilidad operativa y no incluye la amortización del desembolso inicial, que se evalúa con los indicadores de período de repago.
+Este cálculo se enfoca en la sostenibilidad operativa y no incluye la recuperación de la inversión inicial, que se evalúa con los indicadores de período de repago.
 
 \section{Análisis de escenarios}
 
@@ -312,72 +340,68 @@ El escenario base asume una cantidad creciente de suscripciones a los planes Int
 \centering
 \caption{Escenario pesimista}\label{tab:c5-10}
 \footnotesize
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l l l l l l}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r r r}
 \toprule
 \tb{Concepto} & \tb{Año 0} & \tb{Año 1} & \tb{Año 2} & \tb{Año 3} & \tb{Año 4} & \tb{Año 5} \\
 \midrule
 Suscripciones (Intermedio / Plus) & 0 & 7 / 3 & 17 / 7 & 32 / 14 & 50 / 22 & 70 / 32 \\
 Ingresos & USD 0 & USD 960 & USD 2.280 & USD 4.440 & USD 6.960 & USD 9.960 \\
-Costos operativos & USD 0 & USD 367 & USD 550 & USD 896 & USD 1.297 & USD 1.897 \\
-Flujo neto & -USD 100 & USD 593 & USD 1.730 & USD 3.544 & USD 5.663 & USD 8.063 \\
-Flujo acumulado & -USD 100 & USD 493 & USD 2.223 & USD 5.767 & USD 11.430 & USD 19.493 \\
+Costos operativos & USD 0 & $-$USD 1.207 & $-$USD 1.390 & $-$USD 1.736 & $-$USD 2.137 & $-$USD 2.737 \\
+Flujo neto & $-$USD 5.630 & $-$USD 247 & USD 890 & USD 2.704 & USD 4.823 & USD 7.223 \\
+Flujo acumulado & $-$USD 5.630 & $-$USD 5.877 & $-$USD 4.987 & $-$USD 2.283 & USD 2.540 & USD 9.763 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-En el escenario pesimista, el VAN arroja un valor aproximado de USD 9.618, alrededor de un 55~\% menor que el del escenario base, pero igualmente positivo. La TIR resultante es de aproximadamente 755~\%, y el período de repago se extiende a 0,17 años (2,0 meses) en términos simples y a 0,20 años (2,4 meses) en términos descontados.
+En el escenario pesimista, el flujo neto del primer año es negativo, porque los ingresos no alcanzan a cubrir los costos de operación. El VAN arroja un valor aproximado de USD 1.576, casi nueve veces menor que el del escenario base, pero positivo. La TIR resultante es de aproximadamente 27,5~\%, apenas por encima de la tasa de corte, y la inversión se recupera en 3,47 años en términos simples y en 4,46 años en términos descontados.
 
-Este resultado indica que el proyecto mantiene su viabilidad económica incluso si la adopción resulta la mitad de lo proyectado. El indicador más sensible es el VAN, aunque en ambos escenarios la inversión inicial se recupera dentro del primer año.
-
-El escenario optimista supone un 50~\% más de suscripciones que el escenario base en cada año, con los mismos precios y costos fijos. Mantener los costos fijos es un supuesto favorable, porque una mayor cantidad de usuarios podría requerir más infraestructura.
+El escenario optimista supone un 50~\% más de suscripciones que el escenario base en cada año, con los mismos precios y costos fijos. Mantener los costos fijos es un supuesto favorable, porque una mayor cantidad de usuarios podría requerir más infraestructura y más horas de soporte.
 
 \begin{table}[H]
 \centering
 \caption{Escenario optimista}\label{tab:c5-optimista}
 \footnotesize
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l l l l l l}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r r r}
 \toprule
 \tb{Concepto} & \tb{Año 0} & \tb{Año 1} & \tb{Año 2} & \tb{Año 3} & \tb{Año 4} & \tb{Año 5} \\
 \midrule
 Suscripciones (Intermedio / Plus) & 0 & 23 / 9 & 53 / 23 & 98 / 42 & 150 / 68 & 210 / 98 \\
 Ingresos & USD 0 & USD 3.000 & USD 7.320 & USD 13.440 & USD 21.240 & USD 30.240 \\
-Costos operativos & USD 0 & USD 510 & USD 902 & USD 1.526 & USD 2.297 & USD 3.317 \\
-Flujo neto & -USD 100 & USD 2.490 & USD 6.418 & USD 11.914 & USD 18.943 & USD 26.923 \\
-Flujo acumulado & -USD 100 & USD 2.390 & USD 8.808 & USD 20.722 & USD 39.665 & USD 66.588 \\
+Costos operativos & USD 0 & $-$USD 1.350 & $-$USD 1.742 & $-$USD 2.366 & $-$USD 3.137 & $-$USD 4.157 \\
+Flujo neto & $-$USD 5.630 & USD 1.650 & USD 5.578 & USD 11.074 & USD 18.103 & USD 26.083 \\
+Flujo acumulado & $-$USD 5.630 & $-$USD 3.980 & USD 1.598 & USD 12.672 & USD 30.775 & USD 56.858 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-La tabla~\ref{tab:c5-escenarios} resume los indicadores de los tres escenarios, primero con la inversión monetaria de USD 100 y después con la inversión valorizada de USD 5.630.
+La tabla~\ref{tab:c5-escenarios} resume los indicadores de los tres escenarios.
 
 \begin{table}[H]
 \centering
-\caption{Indicadores de los tres escenarios}\label{tab:c5-escenarios}
+\caption{Indicadores de los tres escenarios (inversión inicial de USD 5.630)}\label{tab:c5-escenarios}
 \small
-\begin{tabularx}{\textwidth}{l R R R R}
+\begin{tabularx}{\textwidth}{X r r r r}
 \toprule
- & \multicolumn{1}{r}{\tb{Inversión USD 100}} & \multicolumn{3}{c}{\tb{Inversión valorizada USD 5.630}} \\
-\cmidrule(lr){2-2}\cmidrule(lr){3-5}
-\tb{Escenario} & \tb{VAN} & \tb{VAN} & \tb{TIR} & \tb{Repago descontado} \\
+\tb{Escenario} & \tb{VAN} & \tb{TIR} & \tb{Repago simple} & \tb{Repago descontado} \\
 \midrule
-Pesimista & USD 9.618 & USD 4.088 & 40~\% & 3,7 años \\
-Base & USD 21.449 & USD 15.919 & 79~\% & 2,3 años \\
-Optimista & USD 33.282 & USD 27.752 & 109~\% & 1,8 años \\
+Pesimista & USD 1.576 & 27,5~\% & 3,47 años & 4,46 años \\
+Base & USD 13.407 & 68,6~\% & 2,25 años & 2,70 años \\
+Optimista & USD 25.240 & 99,0~\% & 1,71 años & 2,06 años \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Con la inversión valorizada, el VAN sigue siendo positivo en los tres escenarios y la TIR supera la tasa de corte del 20~\% en todos los casos. En el escenario pesimista la inversión se recupera recién en el cuarto año, por lo que la viabilidad depende de que la adopción no caiga por debajo de ese nivel.
+El VAN es positivo en los tres escenarios y la TIR supera la tasa de corte del 20~\% en todos los casos. Sin embargo, en el escenario pesimista el margen es estrecho, ya que la TIR apenas supera la tasa de corte y la inversión se recupera, en términos descontados, cerca del final del horizonte de cinco años. Por lo tanto, la viabilidad depende de que la adopción no caiga por debajo de ese nivel.
 
 \section{Alternativas consideradas}
 
-Se evaluaron distintas alternativas de monetización. La primera versión de este análisis se basaba solo en alianzas institucionales, lo que dejaba la sostenibilidad del proyecto atada a convencer a instituciones y no reconocía que hay familias que sí obtienen un valor concreto, como coordinar a un cuidador contratado y ver lo que registra sin estar presentes.
+Se evaluaron distintas alternativas de monetización. La primera se basaba solo en alianzas institucionales, lo que dejaba la sostenibilidad del proyecto atada a convencer a instituciones y no reconocía que hay familias que sí obtienen un valor concreto, como coordinar a un cuidador contratado y ver lo que registra sin estar presentes.
 
-Una versión intermedia combinaba planes para familias con un abono aparte para instituciones. Se descartó porque obligaba a tener dos tipos de cuenta distintos, cuando una residencia funciona igual que una familia grande, un dueño con varias personas a cargo y varios cuidadores.
+Una segunda alternativa combinaba planes para familias con un abono aparte para instituciones. Se descartó porque obligaba a tener dos tipos de cuenta distintos, cuando una residencia funciona de la misma manera que una familia grande, un dueño con varias personas a cargo y varios cuidadores.
 
 También se analizó un modelo basado exclusivamente en publicidad. Aunque habría permitido mantener la gratuidad, su viabilidad exigía un volumen masivo de tráfico y la inclusión de anuncios corría el riesgo de saturar la interfaz en un entorno que requiere máxima claridad.
 
-Finalmente se optó por un modelo de suscripción en tres niveles, con un plan gratuito y dos pagos. Este esquema mantiene gratis lo esencial del día a día, incluida la emergencia, cobra a quienes necesitan coordinar a más personas y sirve igual para una familia que para una institución.
+Finalmente se optó por un modelo de suscripción en tres niveles, con un plan gratuito y dos pagos. Este esquema mantiene gratis lo esencial del día a día, incluida la emergencia, cobra a quienes necesitan coordinar a más personas y resulta aplicable tanto a una familia como a una institución.
 
 \section{Análisis de impacto}
 
@@ -391,7 +415,7 @@ Para las clínicas, residencias y centros de día, la plataforma ofrece un regis
 
 \subsection{Impacto legal}
 
-De cara a una implementación real, será imprescindible considerar de manera rigurosa el marco normativo aplicable a la protección de datos personales, prestando especial atención al tratamiento de información sensible vinculada con personas con discapacidad. Esto incluye definir con claridad quién puede ver la información de cada persona, qué pasa cuando un cuidador deja de trabajar con una familia y cómo se informa el uso de los datos en las instituciones. Asimismo, la plataforma funciona estrictamente como una herramienta de orientación y organización, por lo que no reemplaza en ninguna circunstancia la atención médica ni está facultada para realizar diagnósticos ni emitir prescripciones.
+De cara a una implementación real, será imprescindible considerar de manera rigurosa el marco normativo aplicable a la protección de datos personales, prestando especial atención al tratamiento de información sensible vinculada con personas con discapacidad. Esto incluye definir con claridad quién puede ver la información de cada persona, qué ocurre cuando un cuidador deja de trabajar con una familia y cómo se informa el uso de los datos en las instituciones. Asimismo, la plataforma funciona estrictamente como una herramienta de orientación y organización, por lo que no reemplaza en ninguna circunstancia la atención médica ni está facultada para realizar diagnósticos ni emitir prescripciones.
 
 \subsection{Impacto ambiental}
 
@@ -403,15 +427,16 @@ Al tratarse de una solución 100~\% digital, la plataforma no demanda infraestru
     \item Los precios de los planes se mantienen constantes en dólares durante los cinco años.
     \item Las comisiones de cobro representan el 7~\% de lo facturado, como supuesto de trabajo.
     \item Los costos de infraestructura, dominio y servicios externos son reservas presupuestarias para una escala pequeña, no cotizaciones firmes.
+    \item El mantenimiento, el soporte y la actualización del catálogo requieren 10 horas mensuales, valorizadas a USD 7 por hora.
     \item La cantidad de suscripciones de cada escenario es una estimación propia que no fue validada con familias ni con instituciones.
-    \item El valor hora usado para valorizar la inversión es una estimación propia para un perfil junior.
+    \item El valor hora usado para valorizar la inversión y el mantenimiento es una estimación propia para un perfil junior.
     \item No se consideran impuestos ni la amortización de equipos informáticos.
     \item El proyecto no toma deuda, se financia con el aporte inicial y con los ingresos de las suscripciones.
 \end{itemize}
 
 \section{Conclusión}
 
-El análisis económico demuestra la factibilidad del proyecto bajo las condiciones del escenario base definido. La inversión monetaria inicial resulta reducida debido al marco académico en el que se gesta la propuesta y al aprovechamiento de herramientas y servicios de bajo costo o sin cargo. A medida que la plataforma incremente su escala, los costos operativos crecen de forma gradual, mientras que los ingresos se sustentan en las suscripciones de las familias y las instituciones que necesitan más que lo básico.
+El análisis económico demuestra la factibilidad del proyecto bajo las condiciones del escenario base definido. La inversión inicial, valorizada en USD 5.630, se compone casi por completo de horas de trabajo, ya que el gasto monetario de puesta en marcha es reducido gracias al aprovechamiento de herramientas y servicios de bajo costo o sin cargo. A medida que la plataforma incremente su escala, los costos operativos crecen de forma gradual, mientras que los ingresos se sustentan en las suscripciones de las familias y las instituciones que necesitan más que lo básico.
 
-Los indicadores financieros reflejan un panorama favorable en los tres escenarios, incluso en el pesimista, con la mitad de la adopción prevista, y también cuando se valorizan las horas de trabajo como inversión inicial. No obstante, esto depende de que se cumplan las hipótesis de adopción planteadas, que deberán validarse con usuarios e instituciones reales antes de una implementación comercial.
+Con la inversión valorizada y los costos de mantenimiento incluidos, los indicadores resultan favorables en los tres escenarios. En el pesimista, con la mitad de la adopción prevista, el VAN sigue siendo positivo aunque el margen es estrecho. No obstante, esto depende de que se cumplan las hipótesis de adopción planteadas, que deberán validarse con usuarios e instituciones reales antes de una implementación comercial.
 

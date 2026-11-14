@@ -149,6 +149,8 @@
 % -- DIAGRAMA DE GANTT (cronograma) ----------------------------
 % Ver el ejemplo en capitulos/02-metodologia.tex
 \RequirePackage{pgfgantt}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
 % nombres de mes en español para el calendario del Gantt
 \ifx\usal@language\usal@spanishname
   \def\pgfcalendarmonthshortname#1{\ifcase#1\or ene\or feb\or mar\or abr\or may\or jun\or jul\or ago\or sep\or oct\or nov\or dic\fi}

@@ -73,7 +73,7 @@ las siguientes.
 
 \section{Ejecución local}
 
-Requisitos: SDK de .NET 10, Node.js 22 o superior, SQL Server Express (instancia \texttt{.\textbackslash SQLEXPRESS}) y la herramienta de Entity Framework (\texttt{dotnet tool install --global dotnet-ef}). Antes del primer arranque hay que copiar \texttt{appsettings.Local.example.json} como \texttt{appsettings.Local.json} y completar una clave JWT de al menos 32 caracteres. Ese archivo está excluido del repositorio para que los secretos no se publiquen.
+Requisitos: SDK de .NET 10, Node.js 22 o superior, SQL Server Express con la instancia local \texttt{.\textbackslash SQLEXPRESS} y la herramienta de Entity Framework, que se instala con el comando \texttt{dotnet tool install -{}-global dotnet-ef}. Antes de la primera ejecución se debe copiar el archivo \path{appsettings.Local.example.json} con el nombre \path{appsettings.Local.json} y completar en él una clave JWT de al menos 32 caracteres. Ese archivo está excluido del repositorio para que los secretos no se publiquen.
 
 \begin{lstlisting}[caption={Pasos para levantar el sistema en un entorno local}, label={lst:ejecucion}]
 git clone https://github.com/valenquiroz/Tesis.git
@@ -87,4 +87,4 @@ npm install
 npm run dev
 \end{lstlisting}
 
-El parámetro \texttt{--Demo:Cargar=true} carga las familias, la residencia, los recursos y los artículos de demostración. El README del repositorio detalla las cuentas de prueba y, en Windows, el archivo \texttt{iniciar.bat} levanta el backend y el frontend juntos.
+El parámetro \texttt{-{}-Demo:Cargar=true} carga las familias, la residencia, los recursos y los artículos de demostración. El README del repositorio detalla las cuentas de prueba y, en Windows, el archivo \texttt{iniciar.bat} levanta el backend y el frontend juntos.
